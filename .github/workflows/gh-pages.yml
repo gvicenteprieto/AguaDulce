@@ -2,10 +2,9 @@
 
 name: Deploy Front estático to GitHub Pages
 
-# Estos permisos permiten al bot escribir en tu repo y en GitHub Pages
 permissions:
-  contents: write
-  pages: write
+  contents: write   # permitir push en ramas/repos
+  pages: write      # permitir deploy a GitHub Pages
 
 on:
   push:
@@ -20,7 +19,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Si necesitas compilar tu frontend, descomenta y ajusta estas líneas
+      # Si necesitas generear tu frontend, descomenta:
       # - name: Build frontend
       #   run: |
       #     npm ci
