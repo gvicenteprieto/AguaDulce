@@ -1,0 +1,252 @@
+/*
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+*/
+/* —————————————————————————— 
+   1. ROOT Y GLOBAL 
+   —————————————————————————— */
+
+html {
+    position: relative;
+    min-height: 100%;
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem; /* 1rem = 16px sobre html a 16px */
+    color: #333333;
+    background-color: #f4f9f9;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 60px; /* espacio para footer fijo */
+    scroll-behavior: smooth;
+}
+
+/* —————————————————————————— 
+   2. TIPOGRAFÍA 
+   —————————————————————————— */
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #5ca4a9;
+    margin-top: 0;
+}
+
+/* —————————————————————————— 
+   3. NAVEGACIÓN 
+   —————————————————————————— */
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 2em;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #5ca4a9;
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
+
+        nav a:hover {
+            color: #38787a;
+            text-decoration: underline;
+        }
+
+/* —————————————————————————— 
+   4. BOTONES Y ESTADOS FOCUS 
+   —————————————————————————— */
+
+.button, .btn, .btn-link.nav-link {
+    display: inline-block;
+    background-color: #5ca4a9;
+    color: white;
+    padding: 0.8em 1.5em;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+    .button:hover, .btn:hover, .btn-link.nav-link:hover {
+        background-color: #38787a;
+    }
+
+    .btn:focus,
+    .btn:active:focus,
+    .btn-link.nav-link:focus,
+    .form-control:focus,
+    .form-check-input:focus {
+        box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+        outline: none;
+    }
+
+/* —————————————————————————— 
+   5. SECCIONES Y CARDS 
+   —————————————————————————— */
+
+section {
+    padding: 5em 2em;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #d8e3e7;
+    border-radius: 8px;
+    padding: 2em;
+    margin: 1em 0;
+    transition: transform 0.3s ease;
+}
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+/* —————————————————————————— 
+   6. FORMULARIOS FLOATING 
+   —————————————————————————— */
+
+.form-floating > .form-control-plaintext::placeholder,
+.form-floating > .form-control::placeholder {
+    color: var(--bs-secondary-color);
+    text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder,
+.form-floating > .form-control:focus::placeholder {
+    text-align: start;
+}
+
+/* —————————————————————————— 
+   7. ANIMACIONES 
+   —————————————————————————— */
+
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+form h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    margin-bottom: 1em;
+    color: #003366;
+}
+
+.btn-primary {
+    background-color: #0059b3;
+    border-color: #0059b3;
+}
+
+    .btn-primary:hover {
+        background-color: #004080;
+    }
+
+.fade-in {
+    animation: fadeIn 1s ease-out forwards;
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*Para tarjetas con efecto hover*/
+.card:hover {
+    transform: scale(1.02);
+    transition: all 0.3s ease-in-out;
+}
+
+
+/* En el layout principal (ej: _Layout.cshtml o styles.css) */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f4f9f9;
+    color: #333333;
+    scroll-behavior: smooth;
+    flex: 1; /* no margin-bottom acá */
+}
+
+main {
+    flex: 1; /* Empuja el footer hacia abajo si el contenido es poco */
+}
+
+footer {
+    background-color: #f2f2f2;
+    padding: 10px;
+    text-align: center;
+}
