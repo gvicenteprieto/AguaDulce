@@ -1,4 +1,4 @@
-name: Deploy to gh-pages
+name: Deploy to GitHub Pages
 
 permissions:
   contents: write
@@ -6,13 +6,18 @@ permissions:
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          persist-credentials: true
 
       - name: Deploy docs to gh-pages
         uses: peaceiris/actions-gh-pages@v3
