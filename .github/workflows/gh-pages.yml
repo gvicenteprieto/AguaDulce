@@ -12,8 +12,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      # 1. Clona tu repo
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
+      # 2. Publica la carpeta docs/ en la rama main (GitHub Pages)
       - name: Deploy docs folder
         uses: peaceiris/actions-gh-pages@v3
         with:
