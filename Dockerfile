@@ -14,17 +14,13 @@ RUN dotnet publish src/AguaDulce.Web/AguaDulce.Web.csproj \
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /app
 
-# Definimos un directorio montable para las claves
-VOLUME [ "/keys" ]
-
-# Variables por defecto
+# Define el puerto por la variable PORT (o 5000 por defecto)
 ENV PORT=5000
-# No se expande aquí; se pasará en el ENTRYPOINT
 ENV ASPNETCORE_URLS=http://*:$PORT
 
 COPY --from=build /app/out ./
 
 EXPOSE ${PORT}
 
-# 3. Entrypoint que respeta PORT en runtime
-ENTRYPOINT [ "bash", "-lc", "exec dotnet AguaDulce.Web.dll --urls=http://*:$PORT" ]
+# ENTRYPOINT que respeta PORT en runtime
+ENTRYPOINT ["bash", "-lc", "exec dotnet AguaDulce.Web.dll --urls=http://*:$PORT"]
