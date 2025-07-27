@@ -2,6 +2,11 @@
 
 name: Deploy Front estático to GitHub Pages
 
+# Estos permisos permiten al bot escribir en tu repo y en GitHub Pages
+permissions:
+  contents: write
+  pages: write
+
 on:
   push:
     branches:
@@ -12,14 +17,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Clona tu repo
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # 2. Publica la carpeta docs/ en la rama main (GitHub Pages)
-      - name: Deploy docs folder
+      # Si necesitas compilar tu frontend, descomenta y ajusta estas líneas
+      # - name: Build frontend
+      #   run: |
+      #     npm ci
+      #     npm run build
+      #     cp -R build/* docs/
+
+      - name: Publish to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: main
+          publish_branch: gh-pages
           publish_dir: docs
