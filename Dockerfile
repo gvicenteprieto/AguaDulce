@@ -1,5 +1,5 @@
-# Stage 1: build con .NET 9.0 preview
-FROM mcr.microsoft.com/dotnet/sdk:9.0-preview AS build
+# 1. Build con SDK .NET 8
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
 COPY AguaDulce.sln ./
@@ -7,17 +7,24 @@ COPY src/AguaDulce.Web/AguaDulce.Web.csproj src/AguaDulce.Web/
 RUN dotnet restore AguaDulce.sln
 
 COPY . .
-RUN dotnet publish "src/AguaDulce.Web/AguaDulce.Web.csproj" -c Release -o /app/out
+RUN dotnet publish src/AguaDulce.Web/AguaDulce.Web.csproj \
+    -c Release -o /app/out
 
-FROM mcr.microsoft.com/dotnet/aspnet:9.0-preview AS runtime
+# 2. Runtime con ASP.NET 8
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /app
 
-# Escucha en el puerto que venga de PORT o, si no existe, en 5000
-ENV ASPNETCORE_URLS=http://*:${PORT:-5000}
+# Definimos un directorio montable para las claves
+VOLUME [ "/keys" ]
+
+# Variables por defecto
+ENV PORT=5000
+# No se expande aquí; se pasará en el ENTRYPOINT
+ENV ASPNETCORE_URLS=http://*:$PORT
 
 COPY --from=build /app/out ./
 
-# EXPOSE es meramente informativo; Railway usa ASPNETCORE_URLS
-EXPOSE ${PORT:-5000}
+EXPOSE ${PORT}
 
-ENTRYPOINT ["dotnet", "AguaDulce.Web.dll"]
+# 3. Entrypoint que respeta PORT en runtime
+ENTRYPOINT [ "bash", "-lc", "exec dotnet AguaDulce.Web.dll --urls=http://*:$PORT" ]
