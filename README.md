@@ -5,45 +5,45 @@
 
 ## Contenidos
 
-- [Descripción](#descripción)  
-- [Tecnologías](#tecnologías)  
+- [Descripcion](#descripcion)  
+- [Tecnologias](#tecnologias)  
 - [Requisitos previos](#requisitos-previos)  
-- [Instalación](#instalación)  
+- [Instalacion](#instalacion)  
 - [Uso local](#uso-local)  
 - [Despliegue](#despliegue)  
 - [Estructura de directorios](#estructura-de-directorios)  
-- [Contribución](#contribución)  
+- [Contribucion](#contribucion)  
 - [Licencia](#licencia)  
 
 ---
 
-## Descripción
+## Descripcion
 
 
 
 ---
 
-## Tecnologías
+## Tecnologias
 
 - .NET 6  
 - ASP.NET Core MVC  
 - Entity Framework Core  
 - SQL Server  
 - JavaScript / SASS  
-- Swagger (OpenAPI) para documentación de API  
+- Swagger (OpenAPI) para documentacion de API  
 
 ---
 
 ## Requisitos previos
 
 - [.NET 6 SDK](https://dotnet.microsoft.com/download)  
-- SQL Server (o cadena de conexión a servidor compatible)  
+- SQL Server (o cadena de conexion a servidor compatible)  
 - Node.js (para tareas de front-end, opcional)  
 - Git  
 
 ---
 
-## Instalación
+## Instalacion
 
 Clona el repositorio y prepara el entorno local:
 
