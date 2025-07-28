@@ -1,33 +1,65 @@
-@model List<AguaDulce.Web.Models.PublicacionModel>
+@*@model List<PublicacionModel>
 
-<section class="container py-5">
-    <h2 class="text-center mb-4">Publicaciones Destacadas</h2>
-
-    <div id="carruselEditorial" class="carousel slide" data-bs-ride="carousel">
+    <section class="container py-5">
+      <div id="carruselEditorial" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-            @for (int i = 0; i < Model.Count; i++)
-            {
-                var pub = Model[i];
-                var claseActiva = i == 0 ? "active" : "";
-
-                <div class="carousel-item @claseActiva">
-                    <img src="@pub.ImagenUrl" class="d-block w-100 rounded" alt="@pub.Titulo">
-                    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
-                        <h5>@pub.Titulo</h5>
-                        <p class="mb-0"><em>@pub.Subtitulo</em></p>
-                        <p>@pub.Pie</p>
-                    </div>
+          @for (int i = 0; i < Model.Count; i++)
+          {
+            var pub = Model[i];
+            <div class="carousel-item @(i == 0 ? "active" : "")">
+              <a asp-controller="Publicaciones"
+                 asp-action="Details"
+                 asp-route-id="@pub.Id"
+                 class="d-block text-decoration-none">
+                <img src="@pub.ImagenUrl"
+                     class="d-block w-100 rounded"
+                     alt="@pub.Titulo" />
+                <div class="carousel-caption
+                            d-none d-md-block
+                            bg-dark bg-opacity-50
+                            rounded p-3 text-light">
+                  <h5>@pub.Titulo</h5>
+                  <p class="mb-0"><em>@pub.Subtitulo</em></p>
+                  <p>@pub.Pie</p>
                 </div>
-            }
+              </a>
+            </div>
+          }
         </div>
+        <button class="carousel-control-prev" …>Anterior</button>
+        <button class="carousel-control-next" …>Siguiente</button>
+      </div>
+    </section>*@
 
-        <button class="carousel-control-prev" type="button" data-bs-target="#carruselEditorial" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Anterior</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carruselEditorial" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Siguiente</span>
-        </button>
-    </div>
-</section>
+@model List<PublicacionModel>
+
+    <section class="container py-5">
+        <div id="carruselEditorial" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                @for (int i = 0; i < Model.Count; i++)
+                {
+                    var pub = Model[i];
+                    <div class="carousel-item @(i == 0 ? "active" : "")">
+                        <a asp-controller="Publicaciones"
+                           asp-action="Details"
+                           asp-route-id="@pub.Id"
+                           class="d-block text-decoration-none">
+                            <img src="@pub.ImagenUrl"
+                                 class="d-block w-100 rounded"
+                                 alt="@pub.Titulo" />
+                            <div class="carousel-caption
+                        d-none d-md-block
+                        bg-dark bg-opacity-50
+                        rounded p-3 text-light">
+                                <h5>@pub.Titulo</h5>
+                                <p class="mb-0"><em>@pub.Subtitulo</em></p>
+                                <p>@pub.Pie</p>
+                            </div>
+                        </a>
+                    </div>
+                }
+            </div>
+            <button class="carousel-control-prev" …>Anterior</button>
+            <button class="carousel-control-next" …>Siguiente</button>
+        </div>
+    </section>

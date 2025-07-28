@@ -1,63 +1,85 @@
-﻿@model List<AguaDulce.Web.Models.PublicacionModel>
-@{
-    ViewData["Title"] = "Inicio";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
+﻿@using AguaDulce.Web.Models
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
-               <section class="fade-in text-center my-5">
-                   <h1 class="display-4 fw-semibold">Litoral</h1>
-                   @*<p class="lead">Inspiramos, corregimos y maquetamos tus ideas escritas con visión editorial.</p>*@
-               <p class="lead">PRODUCCIÓN Y EDICIÓN DE CONTENIDOS</p>
-                   <a class="btn btn-lg mt-3" asp-controller="Servicios" asp-action="Index">
-                       <i class="bi bi-pencil-fill me-1"></i> Explorar Servicios
-                   </a>
-               </section>
+@model List<PublicacionModel>
 
-<section class="container py-5">
-    <div class="row g-4">
-        <div class="col-md-6">
-            <div class="p-4 border rounded shadow-sm h-100">
-                <h3>¿Quiénes somos?</h3>
-                <p>Un equipo apasionado por el lenguaje, la estética y la publicación...</p>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="p-4 border rounded shadow-sm h-100">
-                <h3>¿Cómo trabajamos?</h3>
-                <p>De forma personalizada, flexible y respetuosa...</p>
-            </div>
-        </div>
-    </div>
-</section>
+    @{
+        ViewData["Title"] = "Inicio";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
 
-<section class="container py-5">
-    <h2 class="text-center mb-4">Publicaciones Destacadas</h2>
+    <section class="fade-in text-center my-5">
+        <h1 class="display-4 fw-semibold">Litoral</h1>
+        <p class="lead">PRODUCCIÓN Y EDICIÓN DE CONTENIDOS</p>
+        <a class="btn btn-lg mt-3" asp-controller="Servicios" asp-action="Index">
+            <i class="bi bi-pencil-fill me-1"></i> Explorar Servicios
+        </a>
+    </section>
 
-    <div id="carruselEditorial" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            @for (int i = 0; i < Model.Count; i++)
-            {
-                var pub = Model[i];
-                var claseActiva = i == 0 ? "active" : "";
-
-                <div class="carousel-item @claseActiva">
-                    <img src="@pub.ImagenUrl" class="d-block w-100 rounded" alt="@pub.Titulo">
-                    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
-                        <h5>@pub.Titulo</h5>
-                        <p class="mb-0"><em>@pub.Subtitulo</em></p>
-                        <p>@pub.Pie</p>
-                    </div>
+    <section class="container py-5">
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="p-4 border rounded shadow-sm h-100">
+                    <h3>¿Quiénes somos?</h3>
+                    <p>Un equipo apasionado por el lenguaje, la estética y la publicación...</p>
                 </div>
-            }
+            </div>
+            <div class="col-md-6">
+                <div class="p-4 border rounded shadow-sm h-100">
+                    <h3>¿Cómo trabajamos?</h3>
+                    <p>De forma personalizada, flexible y respetuosa...</p>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <button class="carousel-control-prev" type="button" data-bs-target="#carruselEditorial" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Anterior</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carruselEditorial" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Siguiente</span>
-        </button>
-    </div>
-</section>
+    <section class="container py-5">
+        <div id="carruselEditorial" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                @for (int i = 0; i < Model.Count; i++)
+                {
+                    var pub = Model[i];
+                    var activeClass = i == 0 ? "active" : "";
+
+                    <div class="carousel-item @activeClass">
+                        <a asp-controller="Publicaciones"
+                           asp-action="Details"
+                           asp-route-id="@pub.Id"
+                           class="d-block position-relative text-decoration-none">
+
+                            <img src="@pub.ImagenUrl"
+                                 class="d-block w-100 rounded banner-home"
+                                 alt="@pub.Titulo"
+                                 loading="lazy" />
+
+                            <div class="carousel-caption
+                                    d-none d-md-block
+                                    bg-dark bg-opacity-50
+                                    rounded p-3
+                                    text-light">
+                                <h5>@pub.Titulo</h5>
+                                @*<p class="mb-0"><em>@pub.Subtitulo</em></p>
+                                <p>@pub.Pie</p>*@
+                            </div>
+                        </a>
+                    </div>
+                }
+            </div>
+
+            <button class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carruselEditorial"
+                    data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carruselEditorial"
+                    data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+    </section>
+

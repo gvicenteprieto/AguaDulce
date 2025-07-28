@@ -1,27 +1,41 @@
 @model List<AguaDulce.Web.Models.ServicioModel>
 
-@{
-    ViewData["Title"] = "Servicios";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
+    @{
+        ViewData["Title"] = "Servicios";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
 
-<section class="fade-in">
-    <div class="text-center mb-4">
-        <h1 class="display-5">Nuestros Servicios</h1>
-        <p class="lead">Acompañamos tu proyecto escrito desde la idea hasta su publicación final.</p>
-    </div>
+    <section class="fade-in">
+        <div class="text-center mb-4">
+            <h1 class="display-5">Nuestros Servicios</h1>
+            <p class="lead">
+                Ofrecemos la posibilidad de realizar diferentes combinaciones de actividades,
+                en un desarrollo de proyecto único y personalizado, creado para dar respuesta
+                a cada necesidad y a cada objetivo concreto.
+            </p>
+        </div>
 
-    <div class="row row-cols-1 row-cols-md-2 g-4">
-        @foreach (var servicio in Model)
-        {
-            <div class="col">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body">
-                        <h5 class="card-title">@servicio.Titulo</h5>
-                        <p class="card-text">@servicio.Descripcion</p>
-                    </div>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            @foreach (var servicio in Model)
+            {
+                <div class="col">
+                    <a asp-action="Details"
+                       asp-route-id="@servicio.Id"
+                       class="text-decoration-none text-dark">
+
+                        <div class="card h-100 shadow-sm">
+                            @*<img src="@servicio.IconoUrl"
+                                 class="card-img-top p-4"
+                                 alt="@servicio.Titulo"
+                                 style="height: 100px; object-fit: contain;" />*@
+
+                            <div class="card-body">
+                                <h5 class="card-title">@servicio.Titulo</h5>
+                                <p class="card-text">@servicio.Descripcion</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </div>
-        }
-    </div>
-</section>
+            }
+        </div>
+    </section>

@@ -1,0 +1,66 @@
+@*@model AguaDulce.Web.Models.PublicacionModel
+
+    @{
+        ViewData["Title"] = Model.Titulo;
+    }
+
+    <section class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <h1 class="mb-4">@Model.Titulo</h1>
+
+                @if (!string.IsNullOrEmpty(Model.ImagenUrl))
+                {
+                    <img src="@Model.ImagenUrl"
+                         class="img-fluid rounded mb-4"
+                         alt="@Model.Titulo" />
+                }
+
+                <p class="lead"><em>@Model.Subtitulo</em></p>
+                <hr />
+                <div>
+                    @Html.Raw(
+                           Model.ContenidoHtml
+                           ?? "&lt;p&gt;No hay contenido disponible.&lt;/p&gt;"
+                         )
+                </div>
+
+                <a asp-controller="Publicaciones"
+                   asp-action="Index"
+                   class="btn btn-secondary mt-4">
+                    &larr; Volver a Publicaciones
+                </a>
+            </div>
+        </div>
+    </section>
+
+*@
+
+
+@model PublicacionModel
+
+@{ ViewData["Title"] = Model.Titulo; }
+
+<section class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h1>@Model.Titulo</h1>
+            @if (!string.IsNullOrEmpty(Model.ImagenUrl))
+            {
+                <img src="@Model.ImagenUrl"
+                     class="img-fluid rounded mb-4"
+                     alt="@Model.Titulo" />
+            }
+            <p class="lead"><em>@Model.Subtitulo</em></p>
+            <hr />
+            <div>
+                @Html.Raw(Model.Contenido)
+            </div>
+            <a asp-action="Index"
+               asp-controller="Home"
+               class="btn btn-secondary mt-4">
+                &larr; Volver
+            </a>
+        </div>
+    </div>
+</section>
