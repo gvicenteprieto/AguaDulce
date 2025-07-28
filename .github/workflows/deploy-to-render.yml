@@ -1,26 +1,37 @@
 name: Deploy to GitHub Pages
 
-permissions:
-  contents: write
-
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
+
+# 1. Declara permisos explícitos
+permissions:
+  contents: read       # lectura del código
+  pages: write         # publicar en gh-pages
+  id-token: write      # para OIDC si lo usas (opcional)
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
+      # 2. Checkout sin credenciales heredadas
       - uses: actions/checkout@v3
         with:
-          fetch-depth: 0      # necesario para poder sobrescribir la rama gh-pages
+          persist-credentials: false
 
-      # … tus pasos de build (dotnet publish, etc.)
+      # 3. (Opcional) Construye tu sitio
+      - name: Build site
+        run: dotnet publish -c Release -o ./public
 
+      # 4. Publica con peaceiris
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./publish
-          publish_branch: gh-pages
+       with:
+  github_token: ${{ secrets.GITHUB_TOKEN }}
+  publish_dir: ./public
+  publish_branch: gh-pages
+
+  user_name: Guillermo Vicente Prieto
+  user_email: gvicenteprieto@users.noreply.github.com
