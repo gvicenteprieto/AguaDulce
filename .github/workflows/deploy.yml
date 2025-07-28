@@ -1,28 +1,28 @@
-name: Build and deploy to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
+
+permissions:
+  contents: read       # lectura del repo
+  pages: write         # permite publicar en gh-pages
+  id-token: write      # si usas OIDC (opcional)
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v3
-
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: '8.0.x'
+          persist-credentials: false  # evita sobreescribir el token
 
-      - name: Restore and Publish
-        run: |
-          dotnet restore
-          dotnet publish -c Release -o published
+      # ... build de tu sitio (npm, dotnet publish, etc.) ...
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./published/wwwroot
+          publish_dir: ./public  # o la carpeta resultante de tu build
