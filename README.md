@@ -1,6 +1,6 @@
 # AguaDulce Servicios Editoriales  
 
-![AguaDulce Logo](https://raw.githubusercontent.com/gvicenteprieto/AguaDulce/main/src/AguaDulce/wwwroot/img/logo.png)
+[![Release](https://img.shields.io/github/v/release/gvicenteprieto/AguaDulce?label=release)](https://github.com/gvicenteprieto/AguaDulce/releases)
 ---
 
 ## Contenidos
