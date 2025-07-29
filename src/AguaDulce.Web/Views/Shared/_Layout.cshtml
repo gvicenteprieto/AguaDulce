@@ -14,7 +14,7 @@
 <html lang="es">
 <head>
     <meta charset="utf-8" />
-    <title>@ViewData["Title"] - Agua Dulce</title>
+    <title>@ViewData["Title"] - Litoral</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Bootstrap & fuentes -->
@@ -32,7 +32,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-controller="Home" asp-action="Index">Agua Dulce</a>
+                <a class="navbar-brand" asp-controller="Home" asp-action="Index">Litoral</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
                         aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -41,7 +41,7 @@
                 <div class="collapse navbar-collapse" id="mainNav">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link @(isActive("Home","Index"))" asp-controller="Home" asp-action="Index">Litoral</a>
+                            <a class="nav-link @(isActive("Home","Index"))" asp-controller="Home" asp-action="Index">Inicio</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link @(isActive("Servicios","Index"))" asp-controller="Servicios" asp-action="Index">Servicios</a>

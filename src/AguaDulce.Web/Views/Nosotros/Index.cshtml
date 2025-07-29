@@ -5,32 +5,93 @@
 
 <section class="fade-in mb-5">
     <div class="text-center mb-4">
-        <h1 class="display-5">Nosotros</h1>
-        <p class="lead">Artesanos de la palabra y de la imagen.</p>
+        <h1 class="display-5">
+            ¿Quiénes somos?
+        </h1>
+        @*<p class="lead">En Litoral, trabajamos con palabras e imágenes.</p>*@
     </div>
 
-    <div class="row align-items-center">
-        <div class="col-md-6">
-            <p style="font-size:1.1em; line-height:1.6;">
-                En Litoral, creemos en el poder de las palabras. Nuestro equipo está dirigido a la construcción de piezas bellas, genuinas y efectivas.
-            </p>
-            <p style="font-size:1.1em; line-height:1.6;">
-                Nos especializamos en redacción y corrección de diferentes tipos de textos, en asesoría creativa, diseño editorial, publicación física o digital y gestión de proyectos de comunicación.
-            </p>
-        </div>
+    <div class="row align-items-center mt-4">
+        @*<div class="col-md-6">*@
+            <div class="text-center">
+                <img src="~/img/equipo-editorial.jpg" class="img-fluid rounded shadow w-50" alt="Foto Fer" />
+          
+                <div class="text-center mt-4">
+                    <p style="font-size:1.1em; line-height:1.6;">
+                        Soy Fernando Vicente Prieto. Esta iniciativa sintetiza en gran medida muchas de las actividades que realizo desde hace más de veinte años. En este proyecto estoy acompañado por un equipo de especialistas que nos permite ofrecer un servicio de calidad.
+                    </p>
 
-        <div class="col-md-6 text-center">
-            <img src="~/img/equipo-editorial.jpg" class="img-fluid rounded shadow w-50" alt="Equipo editorial trabajando" />
+                    <p style="font-size:1.1em; line-height:1.6;">
+                        En Litoral, nos dedicamos a transformar ideas en piezas atractivas. Nuestro equipo está dirigido a la construcción de piezas bellas, genuinas y efectivas. Más que servicios, ofrecemos procesos de creación compartidos, con escucha, detalle y compromiso. Nos especializamos en redacción y corrección de diferentes tipos de textos, en asesoría creativa, diseño editorial, publicación física o digital y gestión de proyectos de comunicación.
+                    </p>
+                    <p style="font-size:1.1em; line-height:1.6;">
+                        Con pasión y experiencia, cada proyecto es una oportunidad para crear algo único y memorable. Desde la concepción hasta la publicación, te acompañamos en cada uno de los pasos necesarios para que tu mensaje no solo se escuche, sino que impacte.
+
+                    </p>
+                </div>
+            </div>
         </div>
-    </div>
 
     <hr class="mt-5" />
 
     <div class="text-center mt-4">
         <h3>Misión</h3>
-        <p style="font-size:1.1em; line-height:1.6;" class="mt-2">Potenciar la escritura y el pensamiento creativo, ofreciendo servicios editoriales de excelencia, con un enfoque ético y sensible. Acompañamos cada proyecto con dedicación artesanal, transformando ideas en publicaciones pulidas y con alma.</p>
+        <p style="font-size:1.1em; line-height:1.6;" class="mt-2">
+            Potenciar la escritura y el pensamiento creativo, ofreciendo servicios editoriales de excelencia, con un enfoque ético y sensible. Acompañamos cada proyecto con dedicación artesanal, transformando ideas en publicaciones pulidas y con alma.
+        </p>
+
+
 
         <h3 class="mt-4">Visión</h3>
-        <p style="font-size:1.1em; line-height:1.6;" class="mt-2">Ser un referente en la edición y el acompañamiento humano de proyectos escritos de calidad, construyendo relaciones de confianza y contribuyendo a que cada voz encuentre su mejor expresión.</p>
+        <p style="font-size:1.1em; line-height:1.6;" class="mt-2">
+            Ser un referente en la edición y el acompañamiento humano de proyectos escritos de calidad, construyendo relaciones de confianza y contribuyendo a que cada voz encuentre su mejor expresión.
+        </p>
     </div>
+    <hr class="mt-5" />
+
+
+
+
+
+
+
+
+    <div class="row row-cols-x-2 row-cols-md-2 g-4 mt-5">
+
+        <!-- Carta de Servicios -->
+        <div class="col">
+            <div class="card bg-secondary text-white text-center py-3">
+                @*<img src="~/img/engranaje.svg"
+                    alt="Icono de engranaje"
+                    class="mx-auto mb-3"
+                    style="width: 64px; height: auto;" />*@
+                <div class="card-body">
+                    <a class="mt-4" asp-controller="Servicios" asp-action="Index">
+                        <i>
+                            <h4>Servicios</h4>
+                        </i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carta de Contacto -->
+        <div class="col">
+            <div class="card bg-secondary text-white text-center py-3">
+                @*<img src="~/img/carta.svg"
+                    alt="Icono de carta"
+                    class="mx-auto mb-3"
+                    style="width: 64px; height: auto;" />*@
+                <div class="card-body">
+                    <a class="mt-4" asp-controller="Contacto" asp-action="Index">
+                        <i>
+                            <h4>Contacto</h4>
+                        </i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
 </section>
