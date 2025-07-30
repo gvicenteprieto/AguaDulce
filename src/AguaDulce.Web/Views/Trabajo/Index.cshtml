@@ -9,45 +9,53 @@
         <div class="text-center mb-4">
             <h1 class="display-5">Nuestro Trabajos</h1>
 
-            @*<div class="container">
-                <div class="row align-items-center">
-                    <div style="font-size:1.1em; line-height:1.6;">
+            @*
 
+          <div class="container">
+        <div class="row align-items-center">
+            <div style="font-size:1.1em; line-height:1.6;">
 
-                        <p class="lead mt-5 text-left">
-                            Ofrecemos la posibilidad de realizar diferentes combinaciones de actividades,
-                            en un desarrollo de proyecto único y personalizado, creado para dar respuesta
-                            a cada necesidad y a cada objetivo concreto.
-                        </p>
-                    </div>
-                    <div class="row row-cols-1 row-cols-md-2 g-4">
-                        @foreach (var trabajo in Model)
-            {
-                        <div class="col">
-                            <a asp-action="Details"
-                               asp-route-id="@trabajo.Id"
-                               class="text-decoration-none text-dark">
+            *@
 
-                                <div class="card h-100 shadow-sm">
-                                    <div class="card-body">
-                                        <h5 class="card-title">@trabajo.Titulo</h5>
-                                        <p class="card-text">@trabajo.Descripcion</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-            }
-                    </div>
+            <p class="lead mt-5 text-left">
+                estamos construyendo el sitio
+            </p>
 
-                </div>
-            </div>*@
+            @*
+
+            <p class="lead mt-5 text-left">
+                Ofrecemos la posibilidad de realizar diferentes combinaciones de actividades,
+                en un desarrollo de proyecto único y personalizado, creado para dar respuesta
+                a cada necesidad y a cada objetivo concreto.
+            </p>
+        </div>
+                  <div class="row row-cols-1 row-cols-md-2 g-4">
+                      @foreach (var trabajo in Model)
+          {
+                      <div class="col">
+                          <a asp-action="Details"
+                             asp-route-id="@trabajo.Id"
+                             class="text-decoration-none text-dark">
+
+                              <div class="card h-100 shadow-sm">
+                                  <div class="card-body">
+                                      <h5 class="card-title">@trabajo.Titulo</h5>
+                                      <p class="card-text">@trabajo.Descripcion</p>
+                                  </div>
+                              </div>
+                          </a>
+                      </div>
+          }
+                  </div>
+
+              </div>
+          </div>*@
         </div>
 
+        
 
-
-        <div class="row row-cols-xs-2 g-4 mt-5">
+        @*<div class="row row-cols-xs-2 g-4 mt-5">
             <div class="col"></div>
-            <!-- a de Nosotros -->
             <div class="col">
                 <div class="text-secondary text-left py-2">
                     <div class="enlace">
@@ -62,8 +70,6 @@
                 </div>
             </div>
             <div class="col"></div>
-
-            <!-- a de Contacto -->
             <div class="col">
                 <div class="text-secondary text-end py-2">
                     <div class="enlace">
@@ -77,7 +83,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="col"></div>
-        </div>
+        </div>*@
     </section>
