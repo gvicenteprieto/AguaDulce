@@ -39,7 +39,7 @@
 
     <section class="container py-5">
         <div class="row g-4">
-            <div class="col-md-6">
+            <div class="col-md-6 p-3">
                 <a class="mt-3" asp-controller="Nosotros" asp-action="Index">
                     <div class="p-4 border rounded shadow-sm h-100 justify-content-center align-items-center text-center">
                         <h3>¿Quiénes somos?</h3>
@@ -47,7 +47,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6  p-3">
                 <a class="mt-3" asp-controller="Servicios" asp-action="Index">
                     <div class="p-4 border rounded shadow-sm h-100 justify-content-center align-items-center text-center">
                         <h3>¿Cómo trabajamos?</h3>
@@ -73,17 +73,17 @@
         var active = i == 0 ? "active" : "";
                 <div class="carousel-item @active">
                     <div class="d-flex justify-content-center align-items-center text-center
-                      navbar-expand bg-secondary text-white rounded mx-auto"
+                      navbar-expand banner rounded mx-auto"
                          style="min-height: 250px;">
                         <div  >
                             <h2 class="my-5">@pub.Titulo</h2>
                             @if (!string.IsNullOrWhiteSpace(pub.Subtitulo))
               {
-                            <p class="fst-italic text-white">@pub.Subtitulo</p>
+                            <h4 class="fst-italic">@pub.Subtitulo</h4>
               }
                             @if (!string.IsNullOrWhiteSpace(pub.Pie))
               {
-                            <small>@pub.Pie</small>
+                            <h6 class="mt-2">@pub.Pie</h6>
               }
                         </div>
                     </div>
