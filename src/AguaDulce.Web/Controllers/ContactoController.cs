@@ -33,7 +33,7 @@ namespace AguaDulce.Web.Controllers
                 string subject = "Contacto desde AguaDulce";
                 string body = $"De: {model.Nombre} ({model.Email})\n\n{model.Mensaje}";
 
-#if DEBUG
+//#if DEBUG
                 var smtp = new SmtpClient
                 {
                     Host = "localhost",
@@ -42,17 +42,17 @@ namespace AguaDulce.Web.Controllers
                     DeliveryMethod = SmtpDeliveryMethod.Network,
                     UseDefaultCredentials = true
                 };
-#else
-var smtp = new SmtpClient
-{
-    Host = "smtp.gmail.com",
-    Port = 587,
-    EnableSsl = true,
-    DeliveryMethod = SmtpDeliveryMethod.Network,
-    UseDefaultCredentials = false,
-    Credentials = new NetworkCredential(fromAddress.Address, fromPassword)
-};
-#endif
+//#else
+//var smtp = new SmtpClient
+//{
+//    Host = "smtp.gmail.com",
+//    Port = 587,
+//    EnableSsl = true,
+//    DeliveryMethod = SmtpDeliveryMethod.Network,
+//    UseDefaultCredentials = false,
+//    Credentials = new NetworkCredential(fromAddress.Address, fromPassword)
+//};
+//#endif
 
                 using var message = new MailMessage(fromAddress, toAddress)
                 {
