@@ -82,6 +82,7 @@ p {
     font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
     color: #555555;
+    text-align: left;
 }
 
 /* —————————————————————————— 
@@ -313,4 +314,12 @@ a {
 
 .logo {
     font-size: 1.5em;
+}
+
+.enlance {
+    display: flex;
+    justify-content: center;
+    background-color: #f2f2f2;
+    padding: 10px;
+    gap: 1em;
 }

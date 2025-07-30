@@ -1,10 +1,14 @@
-@{
-    ViewData["Title"] = "Mensaje Enviado";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+@if (TempData["Exito"] != null)
+{
+<div id="overlay" class="position-fixed top-0 start-0 w-100 h-100 bg-dark bg-opacity-75 text-white d-flex flex-column justify-content-center align-items-center" style="z-index: 1050;">
+    <i class="bi bi-envelope-check-fill fs-1 mb-3"></i>
+    <h3 class="text-center mb-3">@TempData["Exito"]</h3>
+    <p class="text-center text-light">Esta ventana desaparecerá en unos segundos.</p>
+</div>
 }
 
-<div class="text-center fade-in">
+@*<div class="text-center fade-in">
     <h2>¡Gracias por tu mensaje!</h2>
     <p class="mt-3">Nos pondremos en contacto contigo a la brevedad.</p>
     <a href="/" class="btn btn-outline-primary mt-4">Volver al inicio</a>
-</div>
+</div>*@
