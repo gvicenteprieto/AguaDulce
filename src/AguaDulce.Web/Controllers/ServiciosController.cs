@@ -13,6 +13,16 @@ namespace AguaDulce.Web.Controllers
             new ServicioModel
             {
                 Id = 1,
+                Titulo = "Mentoría de proyecto\n",
+                Descripcion = "Diseñamos un recorrido personalizado de acuerdo a tus necesidades específicas \n",
+                DescripcionLarga = "En Litoral te ofrecemos un programa de mentoría diseñado para potenciar cada etapa de tu proyecto, desde la concepción de la idea hasta su puesta en valor ante lectores y editores. Nuestro enfoque combina diagnóstico, revisión y estrategia para que ganes claridad, confianza y calidad en tu texto.\n"
+                         + "\n• Diagnóstico inicial\nDetectamos fortalezas y áreas de mejora en tu manuscrito o propuesta, definiendo objetivos claros y realistas.\n" + "• Plan de trabajo personalizado\nCreamos un cronograma flexible que se adapta a tu ritmo creativo, estableciendo hitos de revisión y entrega.\n" + "• Sesiones de retroalimentación\nTe brindamos comentarios detallados sobre estructura, estilo y contenido, con herramientas y ejemplos prácticos.\n" + "• Asesoría y acompañamiento en procesos de publicación. Ofrecemos diferentes posibilidades de selección de editorial, así como de impresión y de distribución física y digital.\n" + "Contáctanos para diseñar juntos la mentoría que lleve tu obra al siguiente nivel.\n"
+,
+                IconoUrl = "/icons/asesoria.svg"
+            },
+            new ServicioModel
+            {
+                Id =2,
                 Titulo = "Consultoría creativa",
                 Descripcion = "Te orientamos en el proceso editorial y narrativo.",
                 DescripcionLarga = "Te orientamos en el proceso editorial y narrativo."
@@ -21,7 +31,7 @@ namespace AguaDulce.Web.Controllers
             },
             new ServicioModel
             {
-                Id = 2,
+                Id = 3,
                 Titulo = "Redacción",
                 Descripcion = "Damos forma a textos precisos y atractivos.",
                 DescripcionLarga = "Creamos textos  que comunican con claridad y despiertan el interés de tus lectores."
@@ -30,8 +40,8 @@ namespace AguaDulce.Web.Controllers
             },
             new ServicioModel
             {
-                Id = 3,
-                Titulo = "Corrección de estilo",
+                Id = 4,
+                Titulo = "Corrección",
                 Descripcion = "Pulimos tu texto para que brille.",
                 DescripcionLarga = "Pulimos tu texto para que brille."
                          + "Aseguramos fluidez, claridad y coherencia, eliminando errores y mejorando la expresión." + "Tu mensaje será impecable y profesional, listo para cautivar a tu audiencia.",
@@ -63,7 +73,8 @@ namespace AguaDulce.Web.Controllers
                 DescripcionLarga = "Coordinamos integralmente las iniciativas de comunicación de tu organización."
                          + "Planificamos, ejecutamos y supervisamos cada etapa para asegurar resultados exitosos." + "Optimizamos recursos, tareas y tiempos, garantizando una estrategia comunicacional coherente y eficaz.",
                 IconoUrl = "/icons/gestion.svg"
-            }
+            },
+            
         };
 
         [HttpGet]

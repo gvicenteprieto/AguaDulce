@@ -32,77 +32,80 @@
         }
         *@
 
-        <form asp-action="Enviar" method="post" class="row g-4 mx-auto" style="max-width: 700px;">
-            @Html.AntiForgeryToken()
+    <form asp-action="Enviar" method="post" class="row g-4 mx-auto" style="max-width: 700px;">
+        @Html.AntiForgeryToken()
 
-            <div class="col-md-6">
-                <label asp-for="Nombre" class="form-label">
-                    <i class="bi bi-person-fill me-1"></i> Nombre
-                </label>
-                <input asp-for="Nombre" class="form-control" />
-                <span asp-validation-for="Nombre" class="text-danger small"></span>
-            </div>
+        <div class="col-md-6">
+            <label asp-for="Nombre" class="form-label">
+                <i class="bi bi-person-fill me-1"></i> Nombre
+            </label>
+            <input asp-for="Nombre" class="form-control" />
+            <span asp-validation-for="Nombre" class="text-danger small"></span>
+        </div>
 
-            <div class="col-md-6">
-                <label asp-for="Email" class="form-label">
-                    <i class="bi bi-envelope-fill me-1"></i> Email
-                </label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger small"></span>
-            </div>
+        <div class="col-md-6">
+            <label asp-for="Email" class="form-label">
+                <i class="bi bi-envelope-fill me-1"></i> Email
+            </label>
+            <input asp-for="Email" class="form-control" />
+            <span asp-validation-for="Email" class="text-danger small"></span>
+        </div>
 
-            <div class="col-12">
-                <label asp-for="Mensaje" class="form-label">
-                    <i class="bi bi-chat-left-dots-fill me-1"></i> Mensaje
-                </label>
-                <textarea asp-for="Mensaje" class="form-control" rows="5"></textarea>
-                <span asp-validation-for="Mensaje" class="text-danger small"></span>
-            </div>
+        <div class="col-12">
+            <label asp-for="Mensaje" class="form-label">
+                <i class="bi bi-chat-left-dots-fill me-1"></i> Mensaje
+            </label>
+            <textarea asp-for="Mensaje" class="form-control" rows="5"></textarea>
+            <span asp-validation-for="Mensaje" class="text-danger small"></span>
+        </div>
 
-            <div class="col-12 text-center">
-                <button type="submit" class="btn btn-secondary mt-4" id="btnEnviar">
-                    <span id="btnIcono"><i class="bi bi-send-fill me-1"></i></span>
-                    Enviar
-                </button>
-            </div>
+        <div class="col-12 text-center">
+            <button type="submit" class="btn btn-secondary mt-4" id="btnEnviar">
+                <span id="btnIcono"><i class="bi bi-send-fill me-1"></i></span>
+                Enviar
+            </button>
+        </div>
 
-            <!-- Navegación complementaria -->
-            <div class="row row-cols-xs-2 g-4 mt-5">
-                <div class="col"></div>
 
-                <!-- Servicios -->
-                <div class="col">
-                    <div class="text-secondary text-left py-2">
-                        <div class="enlace">
-                            <a asp-controller="Servicios" asp-action="Index">
-                                <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXfVRPVZbs-OyNfvzTEDsK9AWUNLL8wHRqGQxRHQk5te52PtGGFIodPU_tWvSSKBpGoZ46fWakL78TMwDS0cyhBy24eBgElVrcFYT13RaLngj5i4Ynj4jbPe0R3wUrXrYDiJXC-1Aw?key=C1Hi4grsB7cCf18lWccMIg"
-                                     width="70" height="70" alt="Servicios" />
-                                <i><small>&lt; Servicios</small></i>
-                            </a>
-                        </div>
+        <hr class="m-5" />
+
+        <!-- Navegación complementaria -->
+        <div class="row row-cols-xs-2 g-4 mt-5">
+            <div class="col"></div>
+
+            <!-- Servicios -->
+            <div class="col">
+                <div class="text-secondary text-left py-2">
+                    <div class="enlace">
+                        <a asp-controller="Servicios" asp-action="Index">
+                            <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXfVRPVZbs-OyNfvzTEDsK9AWUNLL8wHRqGQxRHQk5te52PtGGFIodPU_tWvSSKBpGoZ46fWakL78TMwDS0cyhBy24eBgElVrcFYT13RaLngj5i4Ynj4jbPe0R3wUrXrYDiJXC-1Aw?key=C1Hi4grsB7cCf18lWccMIg"
+                                 width="70" height="70" alt="Servicios" />
+                            <i><small>&lt; Servicios</small></i>
+                        </a>
                     </div>
                 </div>
+            </div>
 
-                <div class="col"></div>
-                <div class="col"></div>
-                <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
 
-                <!-- Nosotros -->
-                <div class="col">
-                    <div class="text-secondary text-end py-2">
-                        <div class="enlace">
-                            <a asp-controller="Nosotros" asp-action="Index">
-                                <img src="https://tse4.mm.bing.net/th/id/OIP.2a73k8ASu_kgLIDM6F2c5wHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
-                                     width="70" height="70" alt="Nosotros" />
-                                <i><p>Nosotros ></p></i>
-                            </a>
-                        </div>
+            <!-- Nosotros -->
+            <div class="col">
+                <div class="text-secondary text-end py-2">
+                    <div class="enlace">
+                        <a asp-controller="Nosotros" asp-action="Index">
+                            <img src="https://tse4.mm.bing.net/th/id/OIP.2a73k8ASu_kgLIDM6F2c5wHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+                                 width="70" height="70" alt="Nosotros" />
+                            <i><p>Nosotros ></p></i>
+                        </a>
                     </div>
                 </div>
-
-                <div class="col"></div>
             </div>
-        </form>
+
+            <div class="col"></div>
+        </div>
+    </form>
     </div>
 
 </section>

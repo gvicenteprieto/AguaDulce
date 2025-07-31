@@ -8,59 +8,48 @@
         Layout = "~/Views/Shared/_Layout.cshtml";
     }
 
-               <section class="fade-in text-center my-5">
+    <section class="fade-in text-center py-5">
 
-                   @*<h1 class="display-4 fw-semibold">Litoral</h1>
+        @*<h1 class="display-4 fw-semibold">Litoral</h1>
 
-        <div class="card bg-ligth text-white text-center py-3">
-            <img src="~/img/logo.jpeg"
-                 alt="Icono de carta"
-                 class="mx-auto mb-3"
-                 style="width: 64px; height: auto;" />
-        </div>*@
+            <div class="card bg-ligth text-white text-center py-3">
+                <img src="~/img/logo.jpeg"
+                     alt="Icono de carta"
+                     class="mx-auto mb-3"
+                     style="width: 64px; height: auto;" />
+            </div>*@
 
-                   <a class="mt-3" asp-controller="Servicios" asp-action="Index">
-                       <div class="text-center">
-                           <img src="~/img/logo.jpeg" class="img-fluid rounded shadow w-80" alt="Logo" />
-                       </div>
+        <a asp-controller="Servicios" asp-action="Index">
+            <div class="text-center">
+                <img src="~/img/newLogo.jpg" class="img-fluid rounded shadow w-80" alt="Logo" />
+            </div>
+        </a>
+    </section>
 
-
-
-                       @*<p class="lead">PRODUCCIÓN Y EDICIÓN DE CONTENIDOS</p>*@
-                       @*<a class="btn btn-lg mt-3" asp-controller="Servicios" asp-action="Index">
-                <i class="bi bi-pencil-fill me-1"></i> Explorar Servicios
-            </a>*@
-
-
-
-
-                   </a>
-               </section>
-
-    <section class="container py-5">
+    <section class="container">
         <div class="row g-4">
-            <div class="col-md-6 p-3">
-                <a class="mt-3" asp-controller="Nosotros" asp-action="Index">
+            <div class="col-md-6 ">
+                <a asp-controller="Nosotros" asp-action="Index">
                     <div class="p-4 border rounded shadow-sm h-100 justify-content-center align-items-center">
                         <h3 class="mb-3">¿Quiénes somos?</h3>
                         <p style="font-size: 1.1em; line-height: 1.6">En Litoral, trabajamos con palabras e imágenes.</p>
                     </div>
                 </a>
             </div>
-            <div class="col-md-6 p-3">
-                <a class="mt-3" asp-controller="Trabajo" asp-action="Index">
+            <div class="col-md-6 ">
+                <a  asp-controller="Trabajo" asp-action="Index">
                     <div class="p-4 border rounded shadow-sm h-100 justify-content-center align-items-center">
                         <h3 class="mb-3">¿Cómo trabajamos?</h3>
-                        <p style="font-size:1.1em; line-height:1.6" >De forma personalizada, flexible y respetuosa.</p>
+                        <p style="font-size:1.1em; line-height:1.6">De forma personalizada, flexible y respetuosa.</p>
                     </div>
                 </a>
             </div>
             @*<div class="col-md-6">
-            <div class="p-4 border rounded shadow-sm h-100">
-                <h3>¿Cómo trabajamos?</h3>
-                <p>De forma personalizada, flexible y respetuosa...</p>
-            </div>
-        </div>*@
+                    <div class="p-4 border rounded shadow-sm h-100">
+                        <h3>¿Cómo trabajamos?</h3>
+                        <p>De forma personalizada, flexible y respetuosa...</p>
+                    </div>
+                </div>*@
         </div>
     </section>
 
@@ -75,7 +64,7 @@
                     <div class="d-flex justify-content-center align-items-center text-center
                       navbar-expand banner rounded mx-auto"
                          style="min-height: 250px;">
-                        <div  >
+                        <div>
                             <h2 class="my-5">@pub.Titulo</h2>
                             @if (!string.IsNullOrWhiteSpace(pub.Subtitulo))
               {
