@@ -19,6 +19,12 @@
 
     <!-- Bootstrap & fuentes -->
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?
        family=Playfair+Display:wght@400;700&
@@ -27,37 +33,72 @@
           rel="stylesheet">
     <!-- Estilos -->
     <link rel="stylesheet" href="~/css/site.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid m-2">
-                <div class="text-end">
-                    <img src="~/img/newLogo-img.jpg" class="imgLogo" alt="ImagenLogo" />
-                </div>
+                @*<div class="text-end">
+                        <img src="~/img/newLogo-img.jpg" class="imgLogo" alt="ImagenLogo" />
+                    </div>*@
+
+                <a class="navbar-brand d-flex align-items-center" asp-controller="Home" asp-action="Index">
+                    <img src="~/img/newLogo-img.jpg" class="imgLogo me-2" alt="Logo Litoral Editorial" />
+
+                </a>
+
+
                 <a class="navbar-brand  p-2 logo" asp-controller="Home" asp-action="Index">Litoral</a>
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
                         aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="mainNav">
-                    <ul class="navbar-nav me-auto m-1 mb-lg-0">
-                        @*<li class="nav-item">
+                    @*<ul class="navbar-nav me-auto m-1 mb-lg-0">
+                                <li class="nav-item">
                             <a class="nav-link @(isActive("Home","Index"))" asp-controller="Home" asp-action="Index">Inicio</a>
-                        </li>*@
-                        <li class="nav-item">
-                            <a class="nav-link @(isActive("Servicios","Index"))" asp-controller="Servicios" asp-action="Index">Servicios</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link @(isActive("Trabajo","Index"))" asp-controller="Trabajo" asp-action="Index">Cómo Trabajamos</a>
-                        <li class="nav-item">
-                            <a class="nav-link @(isActive("Nosotros","Index"))" asp-controller="Nosotros" asp-action="Index">Quiénes Somos</a>
+                                <li class="nav-item">
+                                    <a class="nav-link @(isActive("Servicios","Index"))" asp-controller="Servicios" asp-action="Index">Servicios</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link @(isActive("Trabajo","Index"))" asp-controller="Trabajo" asp-action="Index">Cómo Trabajamos</a>
+                                <li class="nav-item">
+                                    <a class="nav-link @(isActive("Nosotros","Index"))" asp-controller="Nosotros" asp-action="Index">Quiénes Somos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link @(isActive("Contacto","Index"))" asp-controller="Contacto" asp-action="Index">Contacto</a>
+                                </li>
+                            </ul>*@
+
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item mx-2">
+                            <a class="nav-link @(isActive("Servicios","Index"))" asp-controller="Servicios" asp-action="Index">
+                                <i class="bi bi-tools d-lg-none me-2"></i>Servicios
+                            </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link @(isActive("Contacto","Index"))" asp-controller="Contacto" asp-action="Index">Contacto</a>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link @(isActive("Trabajo","Index"))" asp-controller="Trabajo" asp-action="Index">
+                                <i class="bi bi-briefcase d-lg-none me-2"></i>Cómo Trabajamos
+                            </a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link @(isActive("Nosotros","Index"))" asp-controller="Nosotros" asp-action="Index">
+                                <i class="bi bi-people d-lg-none me-2"></i>Quiénes Somos
+                            </a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link @(isActive("Contacto","Index"))" asp-controller="Contacto" asp-action="Index">
+                                <i class="bi bi-envelope d-lg-none me-2"></i>Contacto
+                            </a>
                         </li>
                     </ul>
+
+
+
                 </div>
             </div>
         </nav>
@@ -67,11 +108,57 @@
         @RenderBody()
     </main>
 
-    <footer class="border-top footer text-muted mt-5">
-        <div class="container text-center">
-            © @DateTime.Now.Year Agua Dulce Editorial
+    @*<footer class="border-top footer text-muted mt-5">
+            <div class="container text-center">
+                © @DateTime.Now.Year Agua Dulce Editorial
+            </div>
+        </footer>*@
+
+    <main class="container-fluid px-0">
+        @RenderBody()
+    </main>
+
+    <footer class="bg-light py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-center text-md-start mb-4 mb-md-0">
+                    <a class="navbar-brand  p-2 logo" asp-controller="Home" asp-action="Index">
+                        <img src="~/img/newLogoFooter.jpg" class="imgLogoFooter mb-3" alt="Logo Litoral Editorial" />
+                    </a>
+                        @*<a class="navbar-brand  p-2 logo" asp-controller="Home" asp-action="Index">Litoral</a>*@
+                        @*<p class="small text-muted">Transformando ideas en publicaciones con alma.</p>*@
+                </div>
+
+                <div class="col-md-4 text-center mt-3 mb-4 mb-md-0">
+                    <h5 class="mb-3">Enlaces rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a asp-controller="Servicios" asp-action="Index" class="text-decoration-none">Servicios</a></li>
+                        <li class="mb-2"><a asp-controller="Trabajo" asp-action="Index" class="text-decoration-none">Cómo Trabajamos</a></li>
+                        <li class="mb-2"><a asp-controller="Nosotros" asp-action="Index" class="text-decoration-none">Quiénes Somos</a></li>
+                        <li><a asp-controller="Contacto" asp-action="Index" class="text-decoration-none">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 text-center mt-3 text-md-end">
+                    <h5 class="mb-3">Contacto</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="bi bi-envelope me-2"></i> contacto@litoral.com</li>
+                        <li class="mb-2"><i class="bi bi-telephone me-2"></i> +54 11 1234-5678</li>
+                        <li><i class="bi bi-geo-alt me-2"></i> Buenos Aires, Argentina</li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="my-4">
+
+            <div class="text-center">
+                <p class="small text-muted mb-0">
+                    &copy; @DateTime.Now.Year Litoral Editorial. Todos los derechos reservados.
+                </p>
+            </div>
         </div>
     </footer>
+
 
     <!-- Scripts -->
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
