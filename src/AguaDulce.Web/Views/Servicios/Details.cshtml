@@ -5,69 +5,54 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-
-<section class="fade-in mb-5 container py-5">
+<section class="fade-in mb-5">
     <div class="m-4">
-        <h3 > _servicios</h3>
-
-
-        @*<section class="container py-5">
-            <a asp-action="Index" class="btn btn-secondary mb-4">
-                &larr; Volver a Servicios
-            </a>*@
-        </div>
-            <div class="card shadow-sm">
-                <div class="row align-items-center">
-                    @*<div class="col-md-4 text-center p-4">
+         <a asp-action="Index" class="mb-4">
+            <h5>  &larr; servicios</h5>
+        </a>
+        <div class="container mt-5">
+            <div class="row align-items-center">
+                <div >
+                    <div class="row align-items-center">
+                        @*<div class="col-md-4 text-center p-4">
                             <img src="@Model.IconoUrl"
                                  alt="@Model.Titulo"
                                  class="img-fluid"
                                  style="max-height: 200px; object-fit: contain;" />
                         </div>*@
-                    @*<div class="col-md-8">*@
-                    <div class="card-body">
-                        <h2 class="card-title mb-3">@Model.Titulo</h2>
-                        <p style="font-size:1.1em; line-height:1.6" class="card-text">@Model.DescripcionLarga</p>
-                    </div>
-                </div>
-            </div>
-
-
-
-            <div class="row row-cols-xs-2 g-4 mt-5">
-                <div class="col"></div>
-                <!-- a de Servicios -->
-                <div class="col">
-                    <div class="text-secondary text-left py-2">
-                        <ddiv class="enlace">
-                            <a class="mt-4" asp-controller="Servicios" asp-action="Index">
-                                <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXfVRPVZbs-OyNfvzTEDsK9AWUNLL8wHRqGQxRHQk5te52PtGGFIodPU_tWvSSKBpGoZ46fWakL78TMwDS0cyhBy24eBgElVrcFYT13RaLngj5i4Ynj4jbPe0R3wUrXrYDiJXC-1Aw?key=C1Hi4grsB7cCf18lWccMIg"
-                                     width="70" height="70" />
-                                <i>
-                                    <p>< Servicios</p>
-                                </i>
-                            </a>
-                        </ddiv>
-                    </div>
-                </div>
-                <div class="col"></div>
-                <!-- a de Contacto -->
-                <div class="col">
-                    <div class="text-secondary text-end py-2">
-                        <div class="enlace">
-                            <a class="mt-4" asp-controller="Contacto" asp-action="Index">
-                                <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdzGMurXZf6AN_4_basWNFqxIuc9fPm8sBmnazxGI4CGKUC09YpOiHIP9OGDu7T_ntvmVhJ_7OJ39OJ_AaFQvLD0GhOdHqBeScNMJGg1JhmA9Lo4T9BZGXHBOv0i5kAkPwHQfGHNw?key=C1Hi4grsB7cCf18lWccMIg"
-                                     width="70" height="70" />
-                                <i>
-                                    <p>Contacto ></p>
-                                </i>
-                            </a>
+                        @*<div class="col-md-8">*@
+                        <div class="card-body">
+                            @*<h2 class="card-title mb-3">@Model.Titulo</h2>*@
+                            <h2 class="mb-3">@Model.Titulo</h2>
+                            <p style="font-size:1.1em; line-height:1.6" class="card-text">@Model.DescripcionLarga</p>
                         </div>
                     </div>
                 </div>
-
-                <div class="col"></div>
-
             </div>
-
-        </section>
+        </div>
+    </div>
+</section>
+<section class="container my-5 text-center">
+    <div class="row g-4 g-md-5 p-5 py-md-5">
+        <div class="row g-0 my-5">
+            <div class="col-md-4 col-4 border-end">
+                <a asp-controller="Nosotros" asp-action="Index" class="nav-card enlace-minimalista">
+                    <i class="fas fa-users fa-2x mr-2 iconosLink"></i>
+                    <span class="mx-3">Nosotros</span>
+                </a>
+            </div>
+            <div class="col-md-4 col-4 border-end">
+                <a asp-controller="Trabajo" asp-action="Index" class="nav-card enlace-minimalista">
+                    <i class="fas fa-hands-helping fa-2x mr-2 iconosLink"></i>
+                    <span class="mx-3">Trabajo</span>
+                </a>
+            </div>
+            <div class="col-md-4 col-4">
+                <a asp-controller="Contacto" asp-action="Index" class="nav-card enlace-minimalista">
+                    <i class="fas fa-envelope fa-2x mr-2 iconosLink"></i>
+                    <span class="mx-3">Contacto</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

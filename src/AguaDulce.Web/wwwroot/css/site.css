@@ -54,7 +54,7 @@ body {
     background-color: #f4f9f9;
     margin: 0;
     padding: 0;
-    margin-bottom: 60px; /* espacio para footer fijo */
+    /*margin-bottom: 60px;*/ /* espacio para footer fijo */
     scroll-behavior: smooth;
 }
 
@@ -175,7 +175,7 @@ section {
     margin: 0 auto;
 }
 
-.card {
+/*.card {
     background-color: #d8e3e7;
     border-radius: 8px;
     padding: 2em;
@@ -185,7 +185,7 @@ section {
 
     .card:hover {
         transform: translateY(-5px);
-    }
+    }*/
 
 /* —————————————————————————— 
    6. FORMULARIOS FLOATING 
@@ -451,6 +451,10 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
 }
 
+h5:hover, h6:hover {
+    color: var(--color-secundario);
+}
+
 p {
     font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
@@ -461,6 +465,7 @@ p {
 .lead,
 h5.card-title {
     font-family: 'Global Monospace', sans-serif;
+/*    color: var(--color-secundario);*/
 }
 
 .text-center {
@@ -556,8 +561,8 @@ nav {
 .card {
     background-color: white;
     border-radius: 12px;
-    padding: 2em;
-    margin: 1em 0;
+/*    padding: 2em;
+    margin: 1em 0;*/
     transition: all 0.3s ease-in-out;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     border: none;
@@ -824,4 +829,387 @@ footer {
     padding: 20px;
     text-align: center;
     margin-top: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+enlace {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    margin: 0 0.5rem;
+    border-radius: 12px;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+    text-align: center;
+    color: var(--color-primario);
+    text-decoration: none;
+    min-width: 120px;
+}
+
+.enlace:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(92, 164, 169, 0.2);
+    background-color: #e9f5f5;
+}
+
+.enlace i {
+    transition: transform 0.3s ease;
+    color: var(--color-primario);
+    margin-bottom: 0.5rem;
+}
+
+.enlace:hover i {
+    transform: scale(1.1);
+}
+
+.enlace span {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+
+
+/* Enlaces modernos */
+.enlace-moderno {
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    align-items: center;*/
+/*    padding: 2rem 1rem;*/
+/*    text-align: center;*/
+/*    color: #222;*/
+    text-decoration: none;
+    transition: all 0.3s ease;
+/*    border: 1px solid #eee;*/
+/*    height: 100%;*/
+/*    background: white;*/
+}
+
+    .enlace-moderno:hover {
+        border-color: #ddd;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .enlace-moderno i {
+        color: #6c757d;
+        transition: all 0.3s ease;
+    }
+
+    .enlace-moderno:hover i {
+        color: #495057;
+    }
+
+    .enlace-moderno span {
+/*        font-family: 'Helvetica Neue', sans-serif;
+        font-weight: 600;*/
+        font-size: 1.25rem;
+/*        margin-bottom: 0.5rem;*/
+/*        color: var(--color-primario);*/
+    }
+
+.linea-divisoria {
+/*    width: 80px;*/
+    height: 0px;
+    background: #dee2e6;
+/*    margin: 0.5rem 0;*/
+    transition: all 0.3s ease;
+}
+
+.enlace-moderno:hover .linea-divisoria {
+    background: var(--color-primario);
+/*    width: 75px;*/
+    height: 1px;
+    margin: 0.25rem 0;
+}
+
+.enlace-moderno:hover span {
+    color: var(--color-primario);
+    font-size: 1.5rem;
+    /*    width: 75px;
+    height: 5px;
+    margin: 0.5rem 0;*/
+}
+
+.masInfo {
+/*    background: var(--color-);*/
+/*    color: red;*/
+}
+
+
+.enlace-moderno:hover .masInfo {
+    /*    font-family: 'Playfair Display', serif;
+    font-weight: 500;*/
+    font-size: 1.1rem;
+    /*    color: var(--color-primario);*/
+    transition: all 0.3s ease;
+/*    background: var(--color-primario);*/
+}
+
+
+
+
+
+.enlace-minimalista {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem 1rem;
+    text-align: center;
+/*    color: #333;*/
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+    .enlace-minimalista:hover {
+        background-color: #f5f5f5;
+    }
+
+    .enlace-minimalista span {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        font-size: 1rem;
+        margin-top: 1rem;
+        letter-spacing: 0.5px;
+    }
+
+.material-icons {
+    color: #5f6368;
+    transition: all 0.3s ease;
+}
+
+.enlace-minimalista:hover .material-icons {
+    color: #202124;
+}
+
+
+/* Efecto para móviles */
+.mobile-tappable {
+    display: block;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    color: inherit;
+}
+
+    .mobile-tappable:hover, .mobile-tappable:focus {
+        transform: translateY(-2px);
+    }
+
+@media (max-width: 767.98px) {
+    .mobile-tappable {
+        margin-bottom: 15px;
+    }
+
+        .mobile-tappable > div {
+            transition: all 0.2s ease;
+            border: 2px solid rgba(0,0,0,0.1) !important;
+        }
+
+        .mobile-tappable:active > div {
+            transform: scale(0.98);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2) !important;
+            border-color: var(--color-primario) !important;
+        }
+
+    .mobile-indicator {
+        display: inline-block !important;
+        color: var(--color-secundario);
+        font-size: 0.9em;
+        transition: all 0.2s ease;
+    }
+
+    .mobile-tappable:active .mobile-indicator {
+        transform: translateX(10px);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+    .card-link > div {
+        transition: all 0.3s ease;
+    }
+
+    .card-link:hover > div {
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+@media (max-width: 767.98px) {
+    .card-link > div {
+        border-left: 4px solid var(--color-primario);
+    }
+}
+
+
+.touch-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease;
+}
+
+    .touch-card > div {
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+.hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-primario);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.touch-hint {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: var(--color-primario);
+    color: white;
+    border-radius: 20px;
+    font-size: 0.8em;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 767.98px) {
+    .touch-card:active {
+        transform: scale(0.98);
+    }
+
+    .touch-card > div {
+        border: 2px solid var(--color-primario);
+    }
+
+    .touch-card:active > div .hover-overlay {
+        opacity: 0.1;
+    }
+
+    .touch-card:active .touch-hint {
+        transform: translateY(3px);
+    }
+}
+
+@media (min-width: 768px) {
+    .touch-card:hover > div {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .touch-card:hover .hover-overlay {
+        opacity: 0.05;
+    }
+}
+
+
+
+
+
+
+/* —————————————————————————— 
+   8. index.css
+   —————————————————————————— */
+/* Estilos para las tarjetas de navegación */
+.nav-card {
+    text-decoration: none;
+    color: inherit;
+/*    display: block;*/
+    transition: transform 0.3s ease;
+}
+
+    .nav-card:hover {
+        text-decoration: none;
+    }
+
+.hover-effect {
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.1) !important;
+}
+
+.nav-card:hover .hover-effect {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+    border-color: var(--color-primario) !important;
+}
+
+/* Efectos para móviles */
+@media (max-width: 767.98px) {
+    .nav-card:active .hover-effect {
+        transform: scale(0.98) !important;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1) !important;
+    }
+
+    .hover-effect {
+/*        border: 2px solid var(--color-primario) !important;*/
+    }
+}
+
+/* Mejoras para el carrusel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-size: 60%;
+}
+
+.banner {
+    background-size: cover;
+    background-position: center;
+}
+
+
+.h-100 {
+    border: none;
+}
+
+.iconosLink {
+    color: var(--color-primario);
 }

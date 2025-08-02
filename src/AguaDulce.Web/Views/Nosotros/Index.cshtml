@@ -8,9 +8,7 @@
         <h1 class="display-5">
             ¿Quiénes somos?
         </h1>
-        @*<p class="lead">En Litoral, trabajamos con palabras e imágenes.</p>*@
     </div>
-
     <div class="container">
         <div class="row align-items-center">
             <div class="col-12 col-lg-6" style="font-size:1.1em; line-height:1.6;">
@@ -22,7 +20,6 @@
 
                 </p>
             </div>
-
             <div class="col-12 col-lg-6 text-center p-5">
                 <img src="~/img/equipo-editorial.jpg" class="img-fluid rounded shadow w-50 mb-3" alt="Foto Fer">
                 <p><i>Soy Fernando Vicente Prieto. Esta iniciativa sintetiza en gran medida muchas de las actividades que realizo desde hace más de veinte años. En este proyecto estoy acompañado por un equipo de especialistas que nos permite ofrecer un servicio de calidad.</i></p>
@@ -34,57 +31,40 @@
 
     <div class="text-left m-4">
         @*<div class="text-center m-4">*@
-            <h3 class="m-3">Misión</h3>
-            <p style="font-size:1.1em; line-height:1.6;" class="mt-2">
-                Potenciar la escritura y el pensamiento creativo, ofreciendo servicios editoriales de excelencia, con un enfoque ético y sensible. Acompañamos cada proyecto con dedicación artesanal, transformando ideas en publicaciones pulidas y con alma.
-            </p>
-
-            <div class="m-3"></div>
-
-            <h3 class="m-3 mt-5">Visión</h3>
-            <p style="font-size:1.1em; line-height:1.6;" class="mt-2">
-                Ser un referente en la edición y el acompañamiento humano de proyectos escritos de calidad, construyendo relaciones de confianza y contribuyendo a que cada voz encuentre su mejor expresión.
-            </p>
-
-        </div>
-
-        <hr class="m-5" />
-
-
-        <div class="row row-cols-xs-2 g-4 mt-5">
-            <div class="col"></div>
-            <!-- a de Servicios -->
-            <div class="col">
-                <div class="text-secondary text-left py-2">
-                 
-                        <a class="mt-4" asp-controller="Servicios" asp-action="Index">
-                            <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXfVRPVZbs-OyNfvzTEDsK9AWUNLL8wHRqGQxRHQk5te52PtGGFIodPU_tWvSSKBpGoZ46fWakL78TMwDS0cyhBy24eBgElVrcFYT13RaLngj5i4Ynj4jbPe0R3wUrXrYDiJXC-1Aw?key=C1Hi4grsB7cCf18lWccMIg"
-                                 width="70" height="70" />
-                            <i>
-                                <p>< Servicios</p>
-                            </i>
-                        </a>
-                  
-                </div>
-            </div>
-            <div class="col"></div>
-            <!-- a de Contacto -->
-            <div class="col">
-                <div class="text-secondary text-end py-2">
-                    
-                        <a class="mt-4" asp-controller="Trabajo" asp-action="Index">
-                            <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdzGMurXZf6AN_4_basWNFqxIuc9fPm8sBmnazxGI4CGKUC09YpOiHIP9OGDu7T_ntvmVhJ_7OJ39OJ_AaFQvLD0GhOdHqBeScNMJGg1JhmA9Lo4T9BZGXHBOv0i5kAkPwHQfGHNw?key=C1Hi4grsB7cCf18lWccMIg"
-                                 width="70" height="70" />
-                            <i>
-                                <p class="text-end">Trabajo ></p>
-                            </i>
-                        </a>
-
-
-                </div>
-            </div>
-
-            <div class="col"></div>
-
-        </div>
+        <h3 class="m-3">Misión</h3>
+        <p style="font-size:1.1em; line-height:1.6;" class="mt-2">
+            Potenciar la escritura y el pensamiento creativo, ofreciendo servicios editoriales de excelencia, con un enfoque ético y sensible. Acompañamos cada proyecto con dedicación artesanal, transformando ideas en publicaciones pulidas y con alma.
+        </p>
+        <div class="m-3"></div>
+        <h3 class="m-3 mt-5">Visión</h3>
+        <p style="font-size:1.1em; line-height:1.6;" class="mt-2">
+            Ser un referente en la edición y el acompañamiento humano de proyectos escritos de calidad, construyendo relaciones de confianza y contribuyendo a que cada voz encuentre su mejor expresión.
+        </p>
+    </div>
 </section>
+<section class="container my-5 text-center">
+    <div class="row g-4 g-md-5 p-5 py-md-5">
+        <div class="row g-0 my-5">
+
+            <div class="col-md-4 col-4 border-end">
+                <a asp-controller="Trabajo" asp-action="Index" class="nav-card enlace-minimalista">
+                    <i class="fas fa-hands-helping fa-2x mr-2 iconosLink"></i>
+                    <span class="mx-3">Trabajo</span>
+                </a>
+            </div>
+            <div class="col-md-4 col-4 border-end">
+                <a asp-controller="Servicios" asp-action="Index" class="nav-card enlace-minimalista">
+                    <i class="fas fa-pen-fancy fa-2x mr-2 iconosLink"></i>
+                    <span class="mx-3">Servicios</span>
+                </a>
+            </div>
+            <div class="col-md-4 col-4 ">
+                <a asp-controller="Contacto" asp-action="Index" class="nav-card enlace-minimalista">
+                    <i class="fas fa-envelope fa-2x mr-2 iconosLink"></i>
+                    <span class="mx-3">Contacto</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
