@@ -18,9 +18,9 @@
 <section class="fade-in mb-5">
     <div class="row row-cols-1 g-5">
         <h2 class="text-center mb-3">
-            <i class="bi bi-journal-text me-2 text-secondary"></i> ¿Querés iniciar tu proyecto editorial?
+            <i class="bi bi-journal-text me-2 text-secondary"></i> ¿Querés iniciar o mejorar tu proyecto?
         </h2>
-        <p class="text-center mb-4">Completá el formulario y nos pondremos en contacto contigo a la brevedad.</p>
+        <p class="text-center mb-4">Estamos listos para acompañarte. Completá el formulario y nos pondremos en contacto a la brevedad.</p>
 
         @*@if (TempData["Exito"] != null)
             {
@@ -32,74 +32,66 @@
             }
         *@
 
-    <form asp-action="Enviar" method="post" class="row g-4 mx-auto" style="max-width: 700px;">
-        @Html.AntiForgeryToken()
+        <form asp-action="Enviar" method="post" class="row g-4 mx-auto" style="max-width: 700px;">
+            @Html.AntiForgeryToken()
 
-        <div class="col-md-6">
-            <label asp-for="Nombre" class="form-label">
-                <i class="bi bi-person-fill me-1"></i> Nombre
-            </label>
-            <input asp-for="Nombre" class="form-control" />
-            <span asp-validation-for="Nombre" class="text-danger small"></span>
-        </div>
+            <div class="col-md-6">
+                <label asp-for="Nombre" class="form-label">
+                    <i class="bi bi-person-fill me-1 mx-2"></i> Nombre
+                </label>
+                <input asp-for="Nombre" class="form-control" />
+                <span asp-validation-for="Nombre" class="text-danger small"></span>
+            </div>
 
-        <div class="col-md-6">
-            <label asp-for="Email" class="form-label">
-                <i class="bi bi-envelope-fill me-1"></i> Email
-            </label>
-            <input asp-for="Email" class="form-control" />
-            <span asp-validation-for="Email" class="text-danger small"></span>
-        </div>
+            <div class="col-md-6">
+                <label asp-for="Email" class="form-label">
+                    <i class="bi bi-envelope-fill me-1 mx-2"></i> Correo
+                </label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger small"></span>
+            </div>
 
-        <div class="col-12">
-            <label asp-for="Mensaje" class="form-label">
-                <i class="bi bi-chat-left-dots-fill me-1"></i> Mensaje
-            </label>
-            <textarea asp-for="Mensaje" class="form-control" rows="5"></textarea>
-            <span asp-validation-for="Mensaje" class="text-danger small"></span>
-        </div>
+            <div class="col-12">
+                <label asp-for="Mensaje" class="form-label">
+                    <i class="bi bi-chat-left-dots-fill me-1 mx-2"></i> Mensaje
+                </label>
+                <textarea asp-for="Mensaje" class="form-control" rows="5"></textarea>
+                <span asp-validation-for="Mensaje" class="text-danger small"></span>
+            </div>
 
-        <div class="col-12 text-center">
-            <button type="submit" class="btn btn-light mt-4" id="btnEnviar">
-                <span id="btnIcono"><i class="bi bi-send-fill me-1"></i></span>
-                Enviar
-            </button>
-        </div>
+            <div class="col-12 text-center">
+                <button type="submit" class="btn btn-light mt-4" id="btnEnviar">
+                    <span id="btnIcono"><i class="bi bi-send-fill me-1"></i></span>
+                    Enviar
+                </button>
+            </div>
 
-    </form>
+        </form>
     </div>
 
 </section>
-
-
 <!-- Navegación editorial con Material Icons -->
-
 <section class="container my-5 text-center">
     <div class="row g-4 g-md-5 p-5 py-md-5">
         <div class="row g-0 my-5">
-
             <div class="col-md-4 col-4 border-end">
                 <a asp-controller="Nosotros" asp-action="Index" class="nav-card enlace-minimalista">
                     <i class="fas fa-users fa-2x mr-2 iconosLink"></i>
                     <span class="mx-3">Nosotros</span>
                 </a>
             </div>
-
             <div class="col-md-4 col-4 border-end">
                 <a asp-controller="Trabajo" asp-action="Index" class="nav-card enlace-minimalista">
                     <i class="fas fa-hands-helping fa-2x mr-2 iconosLink"></i>
                     <span class="mx-3">Trabajo</span>
                 </a>
             </div>
-
             <div class="col-md-4 col-4">
                 <a asp-controller="Servicios" asp-action="Index" class="nav-card enlace-minimalista">
                     <i class="fas fa-pen-fancy fa-2x mr-2 iconosLink"></i>
                     <span class="mx-3">Servicios</span>
                 </a>
             </div>
-
-
         </div>
     </div>
 </section>

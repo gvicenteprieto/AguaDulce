@@ -288,7 +288,8 @@ footer {
 
 
 .banner {
-    background-color: #f2f2f2;
+/*    background-color: #f2f2f2;*/
+    background-color: var(--color-tarjeta);
 }
 
 .banner-home {
@@ -314,6 +315,8 @@ a {
 
 .logo {
     font-size: 1.5em;
+    margin: 0;
+    padding: 0;
 }
 
 .enlance {
@@ -339,7 +342,9 @@ a {
 }
 
 .imgLogoFooter {
-    width: 250px;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 200px;
     height: auto;
 }
 
@@ -436,6 +441,16 @@ section {
     margin: 0 auto;
 }
 
+/*section a {
+    text-decoration: none;
+    color: inherit;
+}
+
+section a div img {
+    width: 100%;
+    height: auto;
+}
+*/
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -908,31 +923,33 @@ enlace {
 
 /* Enlaces modernos */
 .enlace-moderno {
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    align-items: center;*/
-/*    padding: 2rem 1rem;*/
-/*    text-align: center;*/
-/*    color: #222;*/
+    /*    display: flex;*/
+    /*    flex-direction: column;*/
+    /*    align-items: center;*/
+    /*    padding: 2rem 1rem;*/
+    /*    text-align: center;*/
+/*    color: var(--color-primario);*/
     text-decoration: none;
     transition: all 0.3s ease;
-/*    border: 1px solid #eee;*/
-/*    height: 100%;*/
-/*    background: white;*/
+    /*    border: 1px solid #eee;*/
+    /*    height: 100%;*/
+    /*    background: white;*/
 }
 
     .enlace-moderno:hover {
-        border-color: #ddd;
+        border-color: var(--color-tarjeta);
         box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     }
 
     .enlace-moderno i {
-        color: #6c757d;
+        /*                color: #6c757d;*/
+        color: var(--color-tarjeta);
         transition: all 0.3s ease;
+        font-size-adjust: 0.5;
     }
 
     .enlace-moderno:hover i {
-        color: #495057;
+        color: var(--color-secundario);
     }
 
     .enlace-moderno span {
@@ -960,15 +977,17 @@ enlace {
 
 .enlace-moderno:hover span {
     color: var(--color-primario);
-    font-size: 1.5rem;
+    font-size: 1.35rem;
     /*    width: 75px;
     height: 5px;
     margin: 0.5rem 0;*/
 }
 
 .masInfo {
-/*    background: var(--color-);*/
-/*    color: red;*/
+    /*    background: var(--color-);*/
+    /*    color: red;*/
+    margin: 0;
+    font-size: .7rem;
 }
 
 
@@ -1200,6 +1219,9 @@ enlace {
     background-size: 60%;
 }
 
+
+
+
 .banner {
     background-size: cover;
     background-position: center;
@@ -1212,4 +1234,8 @@ enlace {
 
 .iconosLink {
     color: var(--color-primario);
+}
+
+.iconosLinkInicio {
+    color: red;
 }

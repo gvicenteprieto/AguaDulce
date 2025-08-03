@@ -1,0 +1,108 @@
+[
+  {
+    "Id": 1,
+    "Titulo": "Mentoría de proyecto",
+    "Descripcion": "Diseñamos un recorrido personalizado de acuerdo a tus necesidades específicas",
+    "DetalleSeccion": "En Litoral te ofrecemos un programa de mentoría diseñado para potenciar cada etapa de tu proyecto, desde la concepción de la idea hasta su puesta en valor ante lectores y editores. Nuestro enfoque combina diagnóstico, revisión y estrategia para que ganes claridad, confianza y calidad en tu texto.",
+    "DescripcionLarga": [
+      {
+        "TituloSeccion": "Diagnóstico inicial",
+        "Contenido": "Detectamos fortalezas y áreas de mejora en tu manuscrito o propuesta, definiendo objetivos claros y realistas."
+      },
+      {
+        "TituloSeccion": "Plan de trabajo personalizado",
+        "Contenido": "Creamos un cronograma flexible que se adapta a tu ritmo creativo, estableciendo hitos de revisión y entrega."
+      },
+      {
+        "TituloSeccion": "Plan de trabajo personalizado",
+        "Contenido": "Creamos un cronograma flexible que se adapta a tu ritmo creativo, estableciendo hitos de revisión y entrega."
+      },
+      {
+        "TituloSeccion": "Plan de trabajo personalizado",
+        "Contenido": "Te brindamos comentarios detallados sobre estructura, estilo y contenido, con herramientas y ejemplos prácticos."
+      },
+      {
+        "TituloSeccion": "Asesoría y acompañamiento en procesos de publicación.",
+        "Contenido": "Ofrecemos diferentes posibilidades de selección de editorial, así como de impresión y de distribución física y digital.",
+        "link": "Contáctanos para diseñar juntos la mentoría que lleve tu obra al siguiente nivel. >"
+      }
+    ]
+  },
+  {
+    "Id": 2,
+    "Titulo": "Consultoría creativa",
+    "Descripcion": "Te orientamos en el proceso creativo y editorial.",
+    "DetalleSeccion": "Te orientamos en el proceso creativo y editorial. Desde la concepción de la idea hasta la estructura final, te acompañamos para que tu proyecto tome forma con solidez y originalidad."
+  },
+  {
+    "Id": 3,
+    "Titulo": "Redacción",
+    "Descripcion": "Creamos textos que comunican con claridad y despiertan el interés de tus lectores.",
+    "DetalleSeccion": "Creamos textos que comunican con claridad y despiertan el interés de tus lectores. Desde artículos y blogs hasta contenidos web y copys publicitarios, transformamos tus ideas en palabras que conectan y persuaden a tu público."
+  },
+  {
+    "Id": 4,
+    "Titulo": "Corrección",
+    "Descripcion": "Pulimos tu texto para que brille.",
+    "DetalleSeccion": "Pulimos tu texto para que brille. Aseguramos fluidez, claridad y coherencia, eliminando errores y mejorando la expresión. Tu mensaje será impecable y profesional, listo para llegar a tu audiencia.",
+    "DescripcionLarga": [
+      {
+        "Mensaje": "Con ese objetivo, ofrecemos diferentes tipos de corrección:",
+        "TituloSeccion": "Corrección ortotipográfica",
+        "Contenido": "",
+        "Items": [
+          "Revisión de ortografía y gramática (acentos, puntuación, concordancia).",
+          "Ajuste de tipografía: uso correcto de negritas, cursivas, comillas, mayúsculas.",
+          "Unificación de criterios"
+        ]
+      },
+      {
+        "Mensaje": "",
+        "TituloSeccion": "Corrección de estilo",
+        "Contenido": "",
+        "Items": [
+          "Eliminación de redundancias, ambigüedades y muletillas.",
+          "Mejora de la fluidez, el registro lingüístico y la claridad.",
+          "Adaptación del texto al público objetivo (infantil, académico, literario, etc.).",
+          "Respeto del tono y de la voz del autor, sin alterar su estilo personal."
+        ]
+      },
+      {
+        "Mensaje": "",
+        "TituloSeccion": "Corrección de contenido",
+        "Contenido": "",
+        "Items": [
+          "Verificación de la veracidad y coherencia interna del texto.",
+          "Revisión de datos históricos, científicos o técnicos."
+        ]
+      },
+      {
+        "Mensaje": "",
+        "TituloSeccion": "Corrección de galeradas",
+        "Contenido": "",
+        "Items": [
+          "Revisión sobre el texto maquetado, antes de su publicación, para evitar errores tipográficos o de diseño.",
+          "Ajuste de sangrías, espacios, pies de página, títulos y otros detalles visuales."
+        ]
+      }
+    ]
+  },
+  {
+    "Id": 5,
+    "Titulo": "Diseño editorial",
+    "Descripcion": "Maquetamos tu obra con criterios visuales profesionales.",
+    "DetalleSeccion": "Maquetamos tu obra con criterios visuales profesionales. Creamos diseños atractivos y funcionales que realzan tu contenido. Desde libros a revistas, tu publicación tendrá una estética cuidada y funcional."
+  },
+  {
+    "Id": 6,
+    "Titulo": "Publicación",
+    "Descripcion": "Te acompañamos en la publicación impresa o digital.",
+    "DetalleSeccion": "Te acompañamos en la publicación impresa o digital. Gestionamos cada detalle para que tu obra vea la luz. Desde el ISBN hasta la distribución, aseguramos que tu trabajo llegue a manos de tus lectores, sea cual sea el formato."
+  },
+  {
+    "Id": 7,
+    "Titulo": "Gestión de proyectos de comunicación",
+    "Descripcion": "Coordinamos integralmente las iniciativas de comunicación de tu organización.",
+    "DetalleSeccion": "Coordinamos integralmente las iniciativas de comunicación de tu organización. Planificamos, ejecutamos y supervisamos cada etapa para asegurar resultados exitosos. Optimizamos recursos, tareas y tiempos, garantizando una estrategia comunicacional coherente y eficaz."
+  }
+]

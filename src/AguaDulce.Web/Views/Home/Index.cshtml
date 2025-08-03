@@ -8,40 +8,42 @@
     }
 
 
+
     <section class="fade-in text-center py-4 py-md-5">
-        <a asp-controller="Servicios" asp-action="Index">
+        <a href="@Url.Action("Index", "Servicios")" target="_blank">
             <div class="text-center">
-                <img src="~/img/newLogo.jpg" class="img-fluid rounded shadow w-80" alt="Logo Litoral" />
+                <img src="~/img/Litoral_logo.jpg" class="img-fluid rounded shadow w-80" alt="Logo Litoral" />
             </div>
         </a>
     </section>
-    <section class="container my-4">
-        <div class="row g-4 g-md-5 p-2 py-md-5">
+    <section class="container my-1">
+        <div class="row g-2 g-sm-2 g-md-5 p-3 py-md-5">
             <!-- Quiénes Somos -->
-            <div class="col-12 col-md-6 col-lg-6 my-md-3">
+            <div class="col-12 col-md-6 col-lg-6 my-1 my-md-3">
                 <a asp-controller="Nosotros" asp-action="Index" class="nav-card">
-                    <div class="card h-100 border-0 shadow-sm hover-effect text-secondary enlace-moderno">
-                        <div class="card-body px-4 mt-3">
+                    @*<div class="card h-100 border-0 shadow-sm hover-effect enlace-moderno">*@
+                    <div class="card h-100 border-0 shadow-sm hover-effect p-md-3">
+                        <div class="card-body enlace-moderno ">
                             <i class="fas fa-users fa-2x mb-2 mr-2"></i>
-                            <span class="mx-3">¿Quiénes somos?</span>
+                            <span class="mx-2 iconosLink">¿Quiénes somos?</span>
                             <div class="linea-divisoria"></div>
-                            <p class="mt-3" style="font-size: 1.1em; line-height: 1.6">En Litoral, trabajamos con palabras e imágenes.</p>
+                            <p class="mt-2" >En Litoral, trabajamos con palabras e imágenes.</p>
                             <p class="mobile-indicator d-md-none masInfo">
-                                <i class="fas fa-chevron-right"></i> Más información
+                                <i class="fas fa-chevron-right masInfo"></i> Más información
                             </p>
                         </div>
                     </div>
                 </a>
             </div>
             <!-- Cómo trabajamos -->
-            <div class="col-12 col-md-6 col-lg-6 my-md-3">
+            <div class="col-12 col-md-6 col-lg-6 my-1 my-md-3">
                 <a asp-controller="Trabajo" asp-action="Index" class="nav-card">
-                    <div class="card h-100 border-0 shadow-sm hover-effect text-secondary enlace-moderno">
-                        <div class="card-body px-4 mt-3">
-                            <i class="fas fa-hands-helping fa-2x mr-2"></i>
-                            <span class="mx-3">¿Cómo trabajamos?</span>
+                    <div class="card h-100 border-0 shadow-sm hover-effect p-md-3">
+                        <div class="card-body enlace-moderno">
+                            <i class="fas fa-hands-helping fa-2x mb-2 mr-2"></i>
+                            <span class="mx-2 iconosLink">¿Cómo trabajamos?</span>
                             <div class="linea-divisoria"></div>
-                            <p class="mt-3" style="font-size: 1.1em; line-height: 1.6">De forma personalizada, flexible y respetuosa.</p>
+                            <p class="mt-2" >De forma personalizada, flexible y respetuosa.</p>
                             <p class="mobile-indicator d-md-none masInfo">
                                 <i class="fas fa-chevron-right"></i> Más información
                             </p>
@@ -50,14 +52,14 @@
                 </a>
             </div>
             <!-- Servicios -->
-            <div class="col-12 col-md-6 col-lg-6 my-md-3">
+            <div class="col-12 col-md-6 col-lg-6 my-1 my-md-3">
                 <a asp-controller="Servicios" asp-action="Index" class="nav-card ">
-                    <div class="card h-100 border-0 shadow-sm hover-effect enlace-moderno">
-                        <div class="card-body px-4 mt-3">
-                            <i class="fas fa-pen-fancy fa-2x mr-2"></i>
-                            <span class="mx-3">Servicios</span>
+                    <div class="card h-100 border-0 shadow-sm hover-effect p-md-3">
+                        <div class="card-body enlace-moderno">
+                            <i class="fas fa-pen-fancy fa-2x mb-2 mr-2"></i>
+                            <span class="mx-2 iconosLink">Servicios</span>
                             <div class="linea-divisoria"></div>
-                            <p class="mt-3" style="font-size: 1.1em; line-height: 1.6">Conocé nuestros servicios</p>
+                            <p class="mt-2" >Conocé nuestros servicios</p>
                             <p class="mobile-indicator d-md-none masInfo">
                                 <i class="fas fa-chevron-right"></i> Más información
                             </p>
@@ -67,14 +69,14 @@
             </div>
 
             <!-- Contacto -->
-            <div class="col-12 col-md-6 col-lg-6 my-md-3">
+            <div class="col-12 col-md-6 col-lg-6 my-1 my-md-3">
                 <a asp-controller="Contacto" asp-action="Index" class="nav-card ">
-                    <div class="card h-100 border-0 shadow-sm hover-effect enlace-moderno">
-                        <div class="card-body px-4 mt-3">
-                            <i class="fas fa-envelope fa-2x mr-2"></i>
-                            <span class="mx-3">Contacto</span>
+                    <div class="card h-100 border-0 shadow-sm hover-effect p-md-3">
+                        <div class="card-body enlace-moderno">
+                            <i class="fas fa-envelope fa-2x mb-2 mr-2"></i>
+                            <span class="mx-2 iconosLink">Contacto</span>
                             <div class="linea-divisoria"></div>
-                            <p class="mt-3" style="font-size: 1.1em; line-height: 1.6">Hablemos sobre tu proyecto editorial.</p>
+                            <p class="mt-2" >Hablemos sobre tu proyecto editorial.</p>
                             <p class="mobile-indicator d-md-none masInfo">
                                 <i class="fas fa-chevron-right"></i> Más información
                             </p>
@@ -94,7 +96,7 @@
                 var pub = Model[i];
                 var active = i == 0 ? "active" : "";
                 <div class="carousel-item @active">
-                    <div class="d-flex justify-content-center align-items-center text-center banner rounded mx-auto p-4" style="min-height: 250px; background-color: #f8f9fa;">
+                    <div class="d-flex justify-content-center align-items-center text-center banner rounded mx-auto p-4" style="min-height: 250px;">
                         <div>
                             <h2 class="my-3 my-md-5">@pub.Titulo</h2>
                             @if (!string.IsNullOrWhiteSpace(pub.Subtitulo))

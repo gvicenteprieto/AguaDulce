@@ -19,12 +19,9 @@
 
     <!-- Bootstrap & fuentes -->
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?
        family=Playfair+Display:wght@400;700&
@@ -46,12 +43,12 @@
                     </div>*@
 
                 <a class="navbar-brand d-flex align-items-center" asp-controller="Home" asp-action="Index">
-                    <img src="~/img/newLogo-img.jpg" class="imgLogo me-2" alt="Logo Litoral Editorial" />
+                    <img src="~/img/newLogo-img.jpg" class="imgLogo" alt="Logo Litoral Editorial" />
 
                 </a>
 
 
-                <a class="navbar-brand  p-2 logo" asp-controller="Home" asp-action="Index">Litoral</a>
+                <a class="navbar-brand logo" asp-controller="Home" asp-action="Index">Litoral</a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
                         aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -79,25 +76,25 @@
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item mx-2">
                             <a class="nav-link @(isActive("Nosotros","Index"))" asp-controller="Nosotros" asp-action="Index">
-                                <i class="bi bi-people d-lg-none me-2"></i>Quiénes Somos
+                                <i class="fas fa-users fa me-2"></i>Quiénes Somos
                             </a>
                         </li>
 
                         <li class="nav-item mx-2">
                             <a class="nav-link @(isActive("Trabajo","Index"))" asp-controller="Trabajo" asp-action="Index">
-                                <i class="bi bi-briefcase d-lg-none me-2"></i>Cómo Trabajamos
+                                <i class="fas fa-hands-helping fa me-2"></i>Cómo Trabajamos
                             </a>
                         </li>
 
                         <li class="nav-item mx-2">
                             <a class="nav-link @(isActive("Servicios","Index"))" asp-controller="Servicios" asp-action="Index">
-                                <i class="bi bi-tools d-lg-none me-2"></i>Servicios
+                                <i class="fas fa-pen-fancy fa me-2"></i>Servicios
                             </a>
                         </li>
 
                         <li class="nav-item mx-2">
                             <a class="nav-link @(isActive("Contacto","Index"))" asp-controller="Contacto" asp-action="Index">
-                                <i class="bi bi-envelope d-lg-none me-2"></i>Contacto
+                                <i class="fas fa-envelope fa me-2"></i>Contacto
                             </a>
                         </li>
                     </ul>
@@ -111,33 +108,33 @@
         @RenderBody()
     </main>
 
-    <footer class="border-top footer text-muted mt-5">
+    <footer class="border-top  text-muted ">
         <div class="container">
-            <div class="row mt-3">
-                <div class="col-md-4 text-center text-md-start mb-4 mb-md-0">
-                    <a class="navbar-brand  p-2 logo" asp-controller="Home" asp-action="Index">
-                        <img src="~/img/newLogoFooter.jpg" class="imgLogoFooter mb-3" alt="Logo Litoral Editorial" />
+            <div class="row mt-3 d-flex">
+                <div class="col-md-4 text-center m-0  align-items-center">
+                    <a class="navbar-brand" asp-controller="Home" asp-action="Index">
+                        <img src="~/img/Litoral_logo.jpg" class="imgLogoFooter mb-3" alt="Logo Litoral Editorial" />
                     </a>
                     @*<a class="navbar-brand  p-2 logo" asp-controller="Home" asp-action="Index">Litoral</a>*@
                     @*<p class="small text-muted">Transformando ideas en publicaciones con alma.</p>*@
                 </div>
 
-                <div class="col-md-4 text-center mt-3 mb-4 mb-md-0">
-                    <h5 class="mb-3">Enlaces rápidos</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a asp-controller="Servicios" asp-action="Index" class="text-decoration-none">Servicios</a></li>
-                        <li class="mb-2"><a asp-controller="Trabajo" asp-action="Index" class="text-decoration-none">Cómo Trabajamos</a></li>
-                        <li class="mb-2"><a asp-controller="Nosotros" asp-action="Index" class="text-decoration-none">Quiénes Somos</a></li>
-                        <li><a asp-controller="Contacto" asp-action="Index" class="text-decoration-none">Contacto</a></li>
+                <div class="col-md-4 text-center mt-5 mb-md-0  align-items-center">
+           
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="mb-2 enlace-moderno"><a asp-controller="Servicios" asp-action="Index" class="iconosLink">Servicios</a></li>
+                        <li class="mb-2 enlace-moderno"><a asp-controller="Trabajo" asp-action="Index" class="iconosLink">Cómo Trabajamos</a></li>
+                        <li class="mb-2 enlace-moderno"><a asp-controller="Nosotros" asp-action="Index" class="iconosLink">Quiénes Somos</a></li>
+                        <li class="mb-2 enlace-moderno"><a asp-controller="Contacto" asp-action="Index" class="iconosLink">Contacto</a></li>
                     </ul>
                 </div>
 
-                <div class="col-md-4 text-center mt-3 text-md-end">
-                    <h5 class="mb-3">Contacto</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><i class="bi bi-envelope me-2"></i> contacto@litoral.com</li>
-                        <li class="mb-2"><i class="bi bi-telephone me-2"></i> +54 11 1234-5678</li>
-                        <li><i class="bi bi-geo-alt me-2"></i> Buenos Aires, Argentina</li>
+                <div class="col-md-4 text-center mt-5 mb-md-0  align-items-center">
+            
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="mb-2"><i class="bi bi-envelope me-2 iconosLink"></i> litoral.servicios.editoriales@gmail.com</li>
+                        @*<li class="mb-2"><i class="bi bi-telephone me-2"></i> +54 11 1234-5678</li>*@
+                    @*<li>Buenos Aires, Argentina<i class="bi bi-geo-alt me-2"></i> </li>*@
                     </ul>
                 </div>
             </div>
