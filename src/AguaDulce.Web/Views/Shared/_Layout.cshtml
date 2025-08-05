@@ -38,17 +38,14 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid m-2">
-                @*<div class="text-end">
-                        <img src="~/img/newLogo-img.jpg" class="imgLogo" alt="ImagenLogo" />
-                    </div>*@
-
                 <a class="navbar-brand d-flex align-items-center" asp-controller="Home" asp-action="Index">
                     <img src="~/img/newLogo-img.jpg" class="imgLogo" alt="Logo Litoral Editorial" />
-
                 </a>
 
-
-                <a class="navbar-brand logo" asp-controller="Home" asp-action="Index">Litoral</a>
+                <div>
+                    <a class="navbar-brand logo" asp-controller="Home" asp-action="Index">Litoral</a>
+                </div>
+                
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
                         aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,22 +53,6 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="mainNav">
-                    @*<ul class="navbar-nav me-auto m-1 mb-lg-0">
-                                <li class="nav-item">
-                            <a class="nav-link @(isActive("Home","Index"))" asp-controller="Home" asp-action="Index">Inicio</a>
-                        </li>
-                                <li class="nav-item">
-                                    <a class="nav-link @(isActive("Servicios","Index"))" asp-controller="Servicios" asp-action="Index">Servicios</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link @(isActive("Trabajo","Index"))" asp-controller="Trabajo" asp-action="Index">Cómo Trabajamos</a>
-                                <li class="nav-item">
-                                    <a class="nav-link @(isActive("Nosotros","Index"))" asp-controller="Nosotros" asp-action="Index">Quiénes Somos</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link @(isActive("Contacto","Index"))" asp-controller="Contacto" asp-action="Index">Contacto</a>
-                                </li>
-                            </ul>*@
 
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item mx-2">
@@ -108,47 +89,49 @@
         @RenderBody()
     </main>
 
-    <footer class="border-top  text-muted ">
+    <footer class="border-top">
+
+
         <div class="container">
-            <div class="row mt-3 d-flex">
-                <div class="col-md-4 text-center m-0  align-items-center">
-                    <a class="navbar-brand" asp-controller="Home" asp-action="Index">
+            <div class="row mt-3 d-flex justify-content-between">
+                <div class="col-md-4 col-12 ">
+                    <a class="" asp-controller="Home" asp-action="Index">
                         <img src="~/img/Litoral_logo.jpg" class="imgLogoFooter mb-3" alt="Logo Litoral Editorial" />
+
                     </a>
-                    @*<a class="navbar-brand  p-2 logo" asp-controller="Home" asp-action="Index">Litoral</a>*@
-                    @*<p class="small text-muted">Transformando ideas en publicaciones con alma.</p>*@
                 </div>
 
-                <div class="col-md-4 text-center mt-5 mb-md-0  align-items-center">
-           
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="mb-2 enlace-moderno"><a asp-controller="Servicios" asp-action="Index" class="iconosLink">Servicios</a></li>
-                        <li class="mb-2 enlace-moderno"><a asp-controller="Trabajo" asp-action="Index" class="iconosLink">Cómo Trabajamos</a></li>
+                @*<div class="col-md-4 text-center mt-5 mb-md-0  align-items-center">
+                    <ul class="navbar-nav ms-auto mt-md-3 mb-lg-0">
                         <li class="mb-2 enlace-moderno"><a asp-controller="Nosotros" asp-action="Index" class="iconosLink">Quiénes Somos</a></li>
+                        <li class="mb-2 enlace-moderno"><a asp-controller="Trabajo" asp-action="Index" class="iconosLink">Cómo Trabajamos</a></li>
+                        <li class="mb-2 enlace-moderno"><a asp-controller="Servicios" asp-action="Index" class="iconosLink">Servicios</a></li>
                         <li class="mb-2 enlace-moderno"><a asp-controller="Contacto" asp-action="Index" class="iconosLink">Contacto</a></li>
                     </ul>
+                </div>*@
+
+                <div class="col-md-4 col-12">
+                    <div class="navbar-nav  nav-link mt-md-5">
+                        <div class="align-items-center enlace-moderno nav-link mt-md-3">
+                            <i class="bi bi-envelope me-2 iconosLink"></i>
+                            <p class="text-center">
+                                litoral.servicios.editoriales@gmail.com
+                            </p>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="col-md-4 text-center mt-5 mb-md-0  align-items-center">
-            
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="mb-2"><i class="bi bi-envelope me-2 iconosLink"></i> litoral.servicios.editoriales@gmail.com</li>
-                        @*<li class="mb-2"><i class="bi bi-telephone me-2"></i> +54 11 1234-5678</li>*@
-                    @*<li>Buenos Aires, Argentina<i class="bi bi-geo-alt me-2"></i> </li>*@
-                    </ul>
-                </div>
-            </div>
-
-            <hr class="my-4">
-
-            <div class="text-center">
-                <p class="small text-muted mb-0">
-                    &copy; @DateTime.Now.Year Litoral Editorial. Todos los derechos reservados.
-                </p>
             </div>
         </div>
-    </footer>
 
+        <hr class="my-4">
+
+        <div class="text-center">
+            <p class="small text-center mb-0">
+                &copy; @DateTime.Now.Year Litoral Editorial. Todos los derechos reservados.
+            </p>
+        </div>
+      
+    </footer>
 
     <!-- Scripts -->
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

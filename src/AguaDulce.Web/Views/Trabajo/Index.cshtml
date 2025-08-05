@@ -32,28 +32,8 @@
             </div>
         </div>
     </section>
-    <!-- Navegación editorial con Material Icons -->
+
     <section class="container my-5 text-center">
         <div class="row g-4 g-md-5 p-5 py-md-5">
-            <div class="row g-0 my-5">
-                <div class="col-md-4 col-4 border-end">
-                    <a asp-controller="Nosotros" asp-action="Index" class="nav-card enlace-minimalista">
-                        <i class="fas fa-users fa-2x mr-2 iconosLink"></i>
-                        <span class="mx-3">Nosotros</span>
-                    </a>
-                </div>
-                <div class="col-md-4 col-4 border-end">
-                    <a asp-controller="Servicios" asp-action="Index" class="nav-card enlace-minimalista">
-                        <i class="fas fa-pen-fancy fa-2x mr-2 iconosLink"></i>
-                        <span class="mx-3">Servicios</span>
-                    </a>
-                </div>
-                <div class="col-md-4 col-4">
-                    <a asp-controller="Contacto" asp-action="Index" class="nav-card enlace-minimalista">
-                        <i class="fas fa-envelope fa-2x mr-2 iconosLink"></i>
-                        <span class="mx-3">Contacto</span>
-                    </a>
-                </div>
-            </div>
-        </div>
+            <partial name="_NavigationLinks" />
     </section>
