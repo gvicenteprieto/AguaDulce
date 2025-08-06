@@ -11,16 +11,16 @@ namespace AguaDulce.Web.Controllers
     {
         public async Task<IActionResult> Index()
         {
-            var rutaJson = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "data", "publicaciones.json");
+            var rutaJson = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "data", "servicios.json");
 
-            var publicaciones = new List<PublicacionModel>();
+            var servicio = new List<PublicacionModel>();
             if (System.IO.File.Exists(rutaJson))
             {
                 var json = await System.IO.File.ReadAllTextAsync(rutaJson);
-                publicaciones = JsonSerializer.Deserialize<List<PublicacionModel>>(json);
+                servicio = JsonSerializer.Deserialize<List<PublicacionModel>>(json);
             }
 
-            return View(publicaciones);
+            return View(servicio);
         }
     }
 }

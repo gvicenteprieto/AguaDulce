@@ -1,10 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using AguaDulce.Web.Models;
 using System.Text.Json;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace AguaDulce.Web.Controllers
 {
@@ -14,7 +10,7 @@ namespace AguaDulce.Web.Controllers
         public async Task<IActionResult> Index()
         {
             var rutaJson = Path.Combine(Directory.GetCurrentDirectory(),
-                                        "wwwroot", "data", "publicaciones.json");
+                                        "wwwroot", "data", "servicios.json");
 
             List<PublicacionModel> publicaciones = new();
             if (System.IO.File.Exists(rutaJson))
@@ -31,7 +27,7 @@ namespace AguaDulce.Web.Controllers
         public async Task<IActionResult> Details(int id)
         {
             var rutaJson = Path.Combine(Directory.GetCurrentDirectory(),
-                                        "wwwroot", "data", "publicaciones.json");
+                                        "wwwroot", "data", "servicios.json");
 
             List<PublicacionModel> publicaciones = new();
             if (System.IO.File.Exists(rutaJson))

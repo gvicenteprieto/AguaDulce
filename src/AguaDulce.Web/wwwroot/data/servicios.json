@@ -2,7 +2,7 @@
   {
     "Id": 1,
     "Titulo": "Mentoría de proyecto",
-    "Descripcion": "Diseñamos un recorrido personalizado de acuerdo a tus necesidades específicas",
+    "Descripcion": "Diseñamos un recorrido personalizado de acuerdo a tus necesidades específicas.",
     "DetalleSeccion": "En Litoral te ofrecemos un programa de mentoría diseñado para potenciar cada etapa de tu proyecto, desde la concepción de la idea hasta su puesta en valor ante lectores y editores. Nuestro enfoque combina diagnóstico, revisión y estrategia para que ganes claridad, confianza y calidad en tu texto.",
     "DescripcionLarga": [
       {
@@ -14,11 +14,6 @@
         "Contenido": "Creamos un cronograma flexible que se adapta a tu ritmo creativo, estableciendo hitos de revisión y entrega."
       },
       {
-        "TituloSeccion": "Plan de trabajo personalizado",
-        "Contenido": "Creamos un cronograma flexible que se adapta a tu ritmo creativo, estableciendo hitos de revisión y entrega."
-      },
-      {
-        "TituloSeccion": "Plan de trabajo personalizado",
         "Contenido": "Te brindamos comentarios detallados sobre estructura, estilo y contenido, con herramientas y ejemplos prácticos."
       },
       {

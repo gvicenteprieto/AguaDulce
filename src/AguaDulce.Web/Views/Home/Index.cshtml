@@ -1,125 +1,127 @@
-﻿@using AguaDulce.Web.Models
-@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
-@model List<PublicacionModel>
-
-    @{
+﻿@model List<AguaDulce.Web.Models.PublicacionModel>
+@{
     ViewData["Title"] = "Inicio";
     Layout = "~/Views/Shared/_Layout.cshtml";
-    }
+}
 
 
 
-    <section class="fade-in text-center py-4 py-md-5">
-        <a href="@Url.Action("Index", "Servicios")" target="_blank">
-            <div class="text-center">
+<article class="fade-in row justify-content-center align-items-center container my-1 my-md-5">
+    @* <a href="@Url.Action("Index", "publicacions")" target="_blank">
+        <div class="text-center">
+            <img src="~/img/Litoral_logo.jpg" class="img-fluid rounded shadow w-80" alt="Logo Litoral" />
+        </div>
+    </a> *@
+    <div class="col-md-6 col-lg-6 justify-content-center align-items-center container my-1 ">
+        <a href="@Url.Action("Index", "servicios")" target="_blank">
+            <div class="text-center my-1">
                 <img src="~/img/Litoral_logo.jpg" class="img-fluid rounded shadow w-80" alt="Logo Litoral" />
             </div>
         </a>
-    </section>
-    <section class="container my-1">
-        <div class="row g-2 g-sm-2 g-md-5 p-3 py-md-5">
-            <!-- Quiénes Somos -->
-            <div class="col-12 col-md-6 col-lg-6 my-1 my-md-3">
-                <a asp-controller="Nosotros" asp-action="Index" class="nav-card">
-                    @*<div class="card h-100 border-0 shadow-sm hover-effect enlace-moderno">*@
-                    <div class="card h-100 border-0 shadow-sm hover-effect p-md-3">
-                        <div class="card-body enlace-moderno ">
-                            <i class="fas fa-users fa-2x mb-2 mr-2"></i>
-                            <span class="mx-2 iconosLink">¿Quiénes somos?</span>
-                            <div class="linea-divisoria"></div>
-                            <p class="mt-2" >En Litoral, trabajamos con palabras e imágenes.</p>
-                            <p class="mobile-indicator d-md-none masInfo">
-                                <i class="fas fa-chevron-right masInfo"></i> Más información
-                            </p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <!-- Cómo trabajamos -->
-            <div class="col-12 col-md-6 col-lg-6 my-1 my-md-3">
-                <a asp-controller="Trabajo" asp-action="Index" class="nav-card">
-                    <div class="card h-100 border-0 shadow-sm hover-effect p-md-3">
-                        <div class="card-body enlace-moderno">
-                            <i class="fas fa-hands-helping fa-2x mb-2 mr-2"></i>
-                            <span class="mx-2 iconosLink">¿Cómo trabajamos?</span>
-                            <div class="linea-divisoria"></div>
-                            <p class="mt-2" >De forma personalizada, flexible y respetuosa.</p>
-                            <p class="mobile-indicator d-md-none masInfo">
-                                <i class="fas fa-chevron-right"></i> Más información
-                            </p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <!-- Servicios -->
-            <div class="col-12 col-md-6 col-lg-6 my-1 my-md-3">
-                <a asp-controller="Servicios" asp-action="Index" class="nav-card ">
-                    <div class="card h-100 border-0 shadow-sm hover-effect p-md-3">
-                        <div class="card-body enlace-moderno">
-                            <i class="fas fa-pen-fancy fa-2x mb-2 mr-2"></i>
-                            <span class="mx-2 iconosLink">Servicios</span>
-                            <div class="linea-divisoria"></div>
-                            <p class="mt-2" >Conocé nuestros servicios</p>
-                            <p class="mobile-indicator d-md-none masInfo">
-                                <i class="fas fa-chevron-right"></i> Más información
-                            </p>
-                        </div>
-                    </div>
-                </a>
-            </div>
 
-            <!-- Contacto -->
-            <div class="col-12 col-md-6 col-lg-6 my-1 my-md-3">
-                <a asp-controller="Contacto" asp-action="Index" class="nav-card ">
-                    <div class="card h-100 border-0 shadow-sm hover-effect p-md-3">
-                        <div class="card-body enlace-moderno">
-                            <i class="fas fa-envelope fa-2x mb-2 mr-2"></i>
-                            <span class="mx-2 iconosLink">Contacto</span>
-                            <div class="linea-divisoria"></div>
-                            <p class="mt-2" >Hablemos sobre tu proyecto editorial.</p>
-                            <p class="mobile-indicator d-md-none masInfo">
-                                <i class="fas fa-chevron-right"></i> Más información
-                            </p>
-                        </div>
+    </div>
+
+    <div class="col-md-6 container">
+        <!-- Quiénes Somos -->
+        <div class="col-12 my-1 my-md-3">
+            <a href="@Url.Action("Index", "nosotros")" target="_blank" class="nav-card">
+                @*<div class="card h-100 border-0 shadow-sm hover-effect enlace-moderno">*@
+                <div class="card h-100 border-0 shadow-sm hover-effect">
+                    <div class="card-body enlace-moderno ">
+                        <i class="fas fa-users fa-2x"></i>
+                        <span class="mx-2 iconosLink" style="font-size: 1.1rem;">¿Quiénes somos?</span>
+                        <div class="linea-divisoria"></div>
+                        <p class="mt-1" style="font-size: .9rem;">En Litoral, trabajamos con palabras e imágenes.</p>
+                        <p class="mobile-indicator masInfo" style="font-size: .7rem;" >
+                            <i class="fas fa-chevron-right masInfo" ></i> Más información
+                        </p>
                     </div>
-                </a>
-            </div>
+                </div>
+            </a>
         </div>
-    </section>
+        <!-- Cómo trabajamos -->
+        <div class="col-12 my-1 my-md-3">
+            <a href="@Url.Action("Index", "trabajo")" target="_blank"  class="nav-card">
+                <div class="card h-100 border-0 shadow-sm hover-effect">
+                    <div class="card-body enlace-moderno">
+                        <i class="fas fa-hands-helping fa-2x"></i>
+                        <span class="mx-2 iconosLink" style="font-size: 1.1rem;">¿Cómo trabajamos?</span>
+                        <div class="linea-divisoria"></div>
+                        <p class="mt-1" style="font-size: .9rem;">De forma personalizada, flexible y respetuosa.</p>
+                        <p class="mobile-indicator d-md-none masInfo" style="font-size: .7rem;">
+                            <i class="fas fa-chevron-right"></i> Más información
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- publicacions -->
+        <div class="col-12 my-1 my-md-3">
+            <a href="@Url.Action("Index", "servicios")" target="_blank"  class="nav-card ">
+                <div class="card h-100 border-0 shadow-sm hover-effect">
+                    <div class="card-body enlace-moderno">
+                        <i class="fas fa-pen-fancy fa-2x"></i>
+                        <span class="mx-2 iconosLink" style="font-size: 1.1rem;">Servicios</span>
+                        <div class="linea-divisoria"></div>
+                        <p class="mt-1" style="font-size: .9rem;">Conocé nuestros servicios</p>
+                        <p class="mobile-indicator d-md-none masInfo" style="font-size: .7rem;">
+                            <i class="fas fa-chevron-right"></i> Más información
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
 
-    <!-- Carrusel de textos -->
-    <section class="container py-4 py-md-5">
-        <div id="carruselTextos" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner rounded">
-                @for (int i = 0; i < Model.Count; i++)
+        <!-- Contacto -->
+        <div class="col-12 my-1 my-md-3">
+            <a href="@Url.Action("Index", "contacto")" target="_blank"  class="nav-card ">
+                <div class="card h-100 border-0 shadow-sm hover-effect">
+                    <div class="card-body enlace-moderno">
+                        <i class="fas fa-envelope fa-2x"></i>
+                        <span class="mx-2 iconosLink" style="font-size: 1.1rem;">Contacto</span>
+                        <div class="linea-divisoria"></div>
+                        <p class="mt-1" style="font-size: .9rem;">Hablemos sobre tu proyecto editorial.</p>
+                        <p class="mobile-indicator d-md-none masInfo" style="font-size: .7rem;">
+                            <i class="fas fa-chevron-right"></i> Más información
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+</article>
+
+<!-- Carrusel de textos -->
+<section class="container py-4 py-md-5">
+    <div id="carruselTextos" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner rounded">
+            @for (int i = 0; i < Model.Count; i++)
             {
                 var pub = Model[i];
                 var active = i == 0 ? "active" : "";
                 <div class="carousel-item @active">
-                    <div class="d-flex justify-content-center align-items-center text-center banner rounded mx-auto p-4" style="min-height: 250px;">
+                    <div class="d-flex justify-content-center align-items-center text-center banner rounded mx-auto p-4"
+                        >
                         <div>
-                            <h2 class="my-3 my-md-5">@pub.Titulo</h2>
-                            @if (!string.IsNullOrWhiteSpace(pub.Subtitulo))
+                            <h2 class="my-3" style="font-size: 1.5rem;">@pub.Titulo</h2>
+                            @if (!string.IsNullOrWhiteSpace(pub.Descripcion))
                             {
-                            <h4 class="fst-italic text-muted">@pub.Subtitulo</h4>
-                            }
-                            @if (!string.IsNullOrWhiteSpace(pub.Pie))
-                            {
-                            <h6 class="mt-2 text-muted">@pub.Pie</h6>
+                                <h4 class="fst-italic text-muted" style="font-size: 1.2rem;">@pub.Descripcion</h4>
                             }
                         </div>
                     </div>
                 </div>
             }
-            </div>
-
-            @*<button class="carousel-control-prev" type="button" data-bs-target="#carruselTextos" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon bg-dark rounded-circle p-3"></span>
-                    <span class="visually-hidden">Anterior</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carruselTextos" data-bs-slide="next">
-                    <span class="carousel-control-next-icon bg-dark rounded-circle p-3"></span>
-                    <span class="visually-hidden">Siguiente</span>
-                </button>*@
         </div>
-    </section>
+
+        @* <button class="carousel-control-prev" type="button" data-bs-target="#carruselTextos" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon bg-dark rounded-circle p-3"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carruselTextos" data-bs-slide="next">
+            <span class="carousel-control-next-icon bg-dark rounded-circle p-3"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button> *@
+    </div>
+</section>
